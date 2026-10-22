@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" width="100%" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14">
+<title>whoami: Phuriphat Chantiuaong, 4th-year Software Engineering student at Mae Fah Luang University</title>
+<defs><linearGradient id="bar" x1="0" y1="0" x2="1" y2="0.4">
+    <stop offset="0" stop-color="#8a74d6"/><stop offset=".5" stop-color="#d79cc4"/><stop offset="1" stop-color="#86b4e0"/>
+  </linearGradient><clipPath id="win"><rect width="900" height="320" rx="14"/></clipPath></defs>
+<style>
+  .c{opacity:0;animation:show .01s linear forwards}
+  @keyframes show{to{opacity:1}}
+  .k{fill-opacity:0;animation:key .01s linear forwards}
+  @keyframes key{to{fill-opacity:1}}
+  .cursor{animation:blink 1s steps(1) infinite}
+  @keyframes blink{50%{opacity:0}}
+</style>
+<g clip-path="url(#win)">
+  <rect width="900" height="320" fill="#1d1638"/>
+  <rect width="900" height="30" fill="url(#bar)"/>
+  <circle cx="20" cy="15" r="6" fill="#ff9cc5"/><circle cx="40" cy="15" r="6" fill="#ffe27a"/><circle cx="60" cy="15" r="6" fill="#bfe3ff"/>
+  <text x="450" y="20" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">phuriphat@mfu: ~</text>
+  <text class="c" style="animation-delay:0.60s" x="22" y="54"><tspan fill="#ff9cc5">phuriphat@mfu</tspan><tspan fill="#9a92c0">:</tspan><tspan fill="#c4a8ff">~</tspan><tspan fill="#9a92c0">$ </tspan><tspan fill="#ffffff"><tspan class="k" style="animation-delay:0.95s">w</tspan><tspan class="k" style="animation-delay:1.02s">h</tspan><tspan class="k" style="animation-delay:1.09s">o</tspan><tspan class="k" style="animation-delay:1.16s">a</tspan><tspan class="k" style="animation-delay:1.23s">m</tspan><tspan class="k" style="animation-delay:1.30s">i</tspan></tspan></text>
+  <text class="c" style="animation-delay:1.72s" x="22" y="75" fill="#ffd66b" font-weight="700">Phuriphat Chantiuaong</text>
+  <text class="c" style="animation-delay:1.84s" x="22" y="96" fill="#c2b9e3">4th-year Software Engineering student @ Mae Fah Luang University</text>
+  <text class="c" style="animation-delay:2.56s" x="22" y="117"><tspan fill="#ff9cc5">phuriphat@mfu</tspan><tspan fill="#9a92c0">:</tspan><tspan fill="#c4a8ff">~</tspan><tspan fill="#9a92c0">$ </tspan><tspan fill="#ffffff"><tspan class="k" style="animation-delay:2.91s">c</tspan><tspan class="k" style="animation-delay:2.98s">a</tspan><tspan class="k" style="animation-delay:3.05s">t</tspan><tspan class="k" style="animation-delay:3.12s"> </tspan><tspan class="k" style="animation-delay:3.19s">l</tspan><tspan class="k" style="animation-delay:3.26s">o</tspan><tspan class="k" style="animation-delay:3.33s">c</tspan><tspan class="k" style="animation-delay:3.40s">a</tspan><tspan class="k" style="animation-delay:3.47s">t</tspan><tspan class="k" style="animation-delay:3.54s">i</tspan><tspan class="k" style="animation-delay:3.61s">o</tspan><tspan class="k" style="animation-delay:3.68s">n</tspan><tspan class="k" style="animation-delay:3.75s">.</tspan><tspan class="k" style="animation-delay:3.82s">t</tspan><tspan class="k" style="animation-delay:3.89s">x</tspan><tspan class="k" style="animation-delay:3.96s">t</tspan></tspan></text>
+  <text class="c" style="animation-delay:4.38s" x="22" y="138" fill="#c2b9e3">Chiang Rai, Thailand</text>
+  <text class="c" style="animation-delay:5.10s" x="22" y="159"><tspan fill="#ff9cc5">phuriphat@mfu</tspan><tspan fill="#9a92c0">:</tspan><tspan fill="#c4a8ff">~</tspan><tspan fill="#9a92c0">$ </tspan><tspan fill="#ffffff"><tspan class="k" style="animation-delay:5.45s">l</tspan><tspan class="k" style="animation-delay:5.52s">s</tspan><tspan class="k" style="animation-delay:5.59s"> </tspan><tspan class="k" style="animation-delay:5.66s">~</tspan><tspan class="k" style="animation-delay:5.73s">/</tspan><tspan class="k" style="animation-delay:5.80s">s</tspan><tspan class="k" style="animation-delay:5.87s">k</tspan><tspan class="k" style="animation-delay:5.94s">i</tspan><tspan class="k" style="animation-delay:6.01s">l</tspan><tspan class="k" style="animation-delay:6.08s">l</tspan><tspan class="k" style="animation-delay:6.15s">s</tspan></tspan></text>
+  <text class="c" style="animation-delay:6.57s" x="22" y="180" fill="#c2b9e3">web/  mobile/  backend/  game-dev/  security/  design/</text>
+  <text class="c" style="animation-delay:7.29s" x="22" y="201"><tspan fill="#ff9cc5">phuriphat@mfu</tspan><tspan fill="#9a92c0">:</tspan><tspan fill="#c4a8ff">~</tspan><tspan fill="#9a92c0">$ </tspan><tspan fill="#ffffff"><tspan class="k" style="animation-delay:7.64s">.</tspan><tspan class="k" style="animation-delay:7.71s">/</tspan><tspan class="k" style="animation-delay:7.78s">n</tspan><tspan class="k" style="animation-delay:7.85s">o</tspan><tspan class="k" style="animation-delay:7.92s">w</tspan><tspan class="k" style="animation-delay:7.99s">.</tspan><tspan class="k" style="animation-delay:8.06s">s</tspan><tspan class="k" style="animation-delay:8.13s">h</tspan></tspan></text>
+  <text class="c" style="animation-delay:8.55s" x="22" y="222" fill="#c2b9e3">&gt; finishing my final year</text>
+  <text class="c" style="animation-delay:8.67s" x="22" y="243" fill="#c2b9e3">&gt; building APIs with NestJS</text>
+  <text class="c" style="animation-delay:8.79s" x="22" y="264" fill="#c2b9e3">&gt; making my first Unity game</text>
+  <text class="c" style="animation-delay:9.51s" x="22" y="285"><tspan fill="#ff9cc5">phuriphat@mfu</tspan><tspan fill="#9a92c0">:</tspan><tspan fill="#c4a8ff">~</tspan><tspan fill="#9a92c0">$ </tspan><tspan class="cursor" fill="#ffffff">█</tspan></text>
+</g>
+<rect x=".5" y=".5" width="899" height="319" rx="14" fill="none" stroke="#c4a8ff" stroke-opacity=".35"/>
+</svg>

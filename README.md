@@ -14,6 +14,8 @@
 
 </div>
 
+<img src="assets/pixie-laptop.svg" align="right" width="200" alt="A pixel pixie hovering over a laptop while code types itself on the screen" />
+
 I'm a **4th-year Software Engineering student at Mae Fah Luang University (MFU)** in Chiang Rai, Thailand. I like taking an idea all the way through: sketching the screens in Figma, writing the app, wiring up the API and testing it until it holds together. I'm self-motivated and always picking up something new, from mobile frameworks to game engines.
 
 - 🎓 **Studying:** Software Engineering at MFU, now in my final year
@@ -23,6 +25,30 @@ I'm a **4th-year Software Engineering student at Mae Fah Luang University (MFU)*
 - 🔐 **Security:** practising secure coding against the OWASP Top 10 in hands-on labs
 - 🌱 **Right now:** sharpening my backend skills and looking for projects to learn from
 - 📫 **Reach me:** [qssomme@gmail.com](mailto:qssomme@gmail.com)
+
+<br clear="right" />
+
+<img src="assets/terminal.svg" width="100%" alt="Terminal. whoami: Phuriphat Chantiuaong, 4th-year Software Engineering student at Mae Fah Luang University. Location: Chiang Rai, Thailand. Skills: web, mobile, backend, game-dev, security, design. Now: finishing my final year, building APIs with NestJS, making my first Unity game." />
+
+```ts
+const phuriphat: Developer = {
+  name: "Phuriphat Chantiuaong",
+  university: "Mae Fah Luang University (MFU)",
+  major: "Software Engineering",
+  year: 4,
+  location: "Chiang Rai, Thailand",
+  languages: ["JavaScript", "TypeScript", "Python", "Java", "C#", "C++", "Dart"],
+  stack: {
+    web: ["React", "Node.js", "NestJS"],
+    mobile: ["React Native", "Expo", "Flutter"],
+    gameDev: ["Unity"],
+    design: ["Figma"],
+  },
+  tools: ["Git", "GitHub", "GitLab", "VS Code", "Postman", "Docker"],
+  traits: ["self-motivated", "continuous learner"],
+  currentQuest: () => "Graduate and ship things people actually use",
+};
+```
 
 ---
 

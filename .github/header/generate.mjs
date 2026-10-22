@@ -246,8 +246,99 @@ function character() {
 </svg>`;
 }
 
+// ---------- pixie at a laptop (sits beside the About Me text) ----------
+
+function pixieLaptop() {
+  const S = 260, PX = 7;
+  const ox = -6 * PX, oy = -5 * PX;
+  const pixie = `<g class="wings">${sprite(PIXIE_WINGS, { W: '#e6f6ff' }, PX, ox, oy)}</g>${sprite(PIXIE_BODY, PIXIE_COLORS, PX, ox, oy)}`;
+  // laptop: lid, screen, code lines that type in and out, keyboard base
+  const lx = 62, ly = 150, lw = 136, lh = 78;
+  const code = [[0, 48, '#ff9cc5'], [1, 80, '#c4a8ff'], [2, 64, '#bfe3ff'], [3, 92, '#ffe27a'], [4, 40, '#c4a8ff'], [5, 72, '#ff9cc5']]
+    .map(([i, w, col]) => `<rect class="line" style="animation-delay:${(i * 0.35).toFixed(2)}s" x="${lx + 12 + (i % 3 === 1 ? 10 : 0)}" y="${ly + 12 + i * 9}" width="${w}" height="5" fill="${col}"/>`).join('');
+  const sparkles = [[34, 52], [222, 70], [210, 160], [40, 150], [128, 22], [236, 120]]
+    .map(([x, y], i) => `<g class="tw" style="animation-duration:${(1.4 + i * 0.3).toFixed(1)}s;animation-delay:-${(i * 0.5).toFixed(1)}s"><rect x="${x}" y="${y - 4}" width="3" height="11" fill="#fff4c2"/><rect x="${x - 4}" y="${y}" width="11" height="3" fill="#fff4c2"/></g>`).join('');
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${S} ${S}" width="${S}" height="${S}">
+<title>A pixel pixie coding on a laptop</title>
+<defs>
+  <radialGradient id="glow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#d79cc4" stop-opacity=".55"/><stop offset=".6" stop-color="#8a74d6" stop-opacity=".25"/><stop offset="1" stop-color="#8a74d6" stop-opacity="0"/></radialGradient>
+</defs>
+<style>${SKY_STYLE}
+  .wings{transform-box:fill-box;transform-origin:center;animation:flap .22s ease-in-out infinite alternate}
+  @keyframes flap{to{transform:scaleY(.55)}}
+  .line{transform-box:fill-box;transform-origin:left;animation:type 2.1s steps(6) infinite}
+  @keyframes type{0%{transform:scaleX(0)}60%,100%{transform:scaleX(1)}}
+</style>
+<circle cx="${S / 2}" cy="${S / 2}" r="${S / 2}" fill="url(#glow)"/>
+${sparkles}
+<rect x="${lx}" y="${ly}" width="${lw}" height="${lh}" fill="#c4a8ff"/>
+<rect x="${lx + 6}" y="${ly + 6}" width="${lw - 12}" height="${lh - 12}" fill="#1d1638"/>
+${code}
+<rect x="${lx - 18}" y="${ly + lh}" width="${lw + 36}" height="10" fill="#a98bf0"/>
+<rect x="${lx - 18}" y="${ly + lh + 10}" width="${lw + 36}" height="5" fill="#7b5fd0"/>
+<rect x="${lx + lw / 2 - 16}" y="${ly + lh + 2}" width="32" height="4" fill="#c4a8ff"/>
+<g transform="translate(${S / 2} 92)"><g class="bob">${pixie}</g></g>
+</svg>`;
+}
+
+// ---------- terminal that types out an introduction ----------
+
+const TERMINAL = [
+  ['whoami', ['Phuriphat Chantiuaong', '4th-year Software Engineering student @ Mae Fah Luang University']],
+  ['cat location.txt', ['Chiang Rai, Thailand']],
+  ['ls ~/skills', ['web/  mobile/  backend/  game-dev/  security/  design/']],
+  ['./now.sh', ['> finishing my final year', '> building APIs with NestJS', '> making my first Unity game']],
+];
+
+function terminal() {
+  const LH = 21, PAD = 22, TOP = 54;
+  const lines = TERMINAL.reduce((n, [, out]) => n + 1 + out.length, 1);
+  const H = TOP + lines * LH + 14;
+  const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  const prompt = `<tspan fill="#ff9cc5">phuriphat@mfu</tspan><tspan fill="#9a92c0">:</tspan><tspan fill="#c4a8ff">~</tspan><tspan fill="#9a92c0">$ </tspan>`;
+  let t = 0.6, row = 0;
+  const out = [];
+  const at = (d) => `style="animation-delay:${d.toFixed(2)}s"`;
+  for (const [cmd, result] of TERMINAL) {
+    const y = TOP + row * LH;
+    const chars = [...cmd].map((ch, i) => `<tspan class="k" ${at(t + 0.35 + i * 0.07)}>${esc(ch)}</tspan>`).join('');
+    out.push(`<text class="c" ${at(t)} x="${PAD}" y="${y}">${prompt}<tspan fill="#ffffff">${chars}</tspan></text>`);
+    t += 0.35 + cmd.length * 0.07 + 0.35;
+    row++;
+    result.forEach((r, i) => {
+      const color = i === 0 && cmd === 'whoami' ? '#ffd66b' : '#c2b9e3';
+      out.push(`<text class="c" ${at(t + i * 0.12)} x="${PAD}" y="${TOP + row * LH}" fill="${color}"${i === 0 && cmd === 'whoami' ? ' font-weight="700"' : ''}>${esc(r)}</text>`);
+      row++;
+    });
+    t += result.length * 0.12 + 0.6;
+  }
+  const lastY = TOP + row * LH;
+  out.push(`<text class="c" ${at(t)} x="${PAD}" y="${lastY}">${prompt}<tspan class="cursor" fill="#ffffff">█</tspan></text>`);
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="100%" font-family="${MONO}" font-size="14">
+<title>whoami: Phuriphat Chantiuaong, 4th-year Software Engineering student at Mae Fah Luang University</title>
+<defs>${skyGradient('bar', false)}<clipPath id="win"><rect width="${W}" height="${H}" rx="14"/></clipPath></defs>
+<style>
+  .c{opacity:0;animation:show .01s linear forwards}
+  @keyframes show{to{opacity:1}}
+  .k{fill-opacity:0;animation:key .01s linear forwards}
+  @keyframes key{to{fill-opacity:1}}
+  .cursor{animation:blink 1s steps(1) infinite}
+  @keyframes blink{50%{opacity:0}}
+</style>
+<g clip-path="url(#win)">
+  <rect width="${W}" height="${H}" fill="#1d1638"/>
+  <rect width="${W}" height="30" fill="url(#bar)"/>
+  <circle cx="20" cy="15" r="6" fill="#ff9cc5"/><circle cx="40" cy="15" r="6" fill="#ffe27a"/><circle cx="60" cy="15" r="6" fill="#bfe3ff"/>
+  <text x="${W / 2}" y="20" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">phuriphat@mfu: ~</text>
+  ${out.join('\n  ')}
+</g>
+<rect x=".5" y=".5" width="${W - 1}" height="${H - 1}" rx="14" fill="none" stroke="#c4a8ff" stroke-opacity=".35"/>
+</svg>`;
+}
+
 mkdirSync('assets', { recursive: true });
-for (const [file, svg] of [['header', header()], ['footer', footer()], ['character', character()]]) {
+for (const [file, svg] of [['header', header()], ['footer', footer()], ['character', character()], ['pixie-laptop', pixieLaptop()], ['terminal', terminal()]]) {
   writeFileSync(`assets/${file}.svg`, svg);
   console.log(`assets/${file}.svg written (${svg.length} bytes)`);
 }
