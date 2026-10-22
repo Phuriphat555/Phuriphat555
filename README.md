@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:c4a8ff,50:ffc9dd,100:bfe3ff&height=210&section=header&text=Phuriphat%20Chantiuaong&fontSize=44&fontColor=ffffff&fontAlignY=36&desc=Software%20Engineering%20Student&descSize=18&descAlignY=58&animation=fadeIn" width="100%" alt="Phuriphat Chantiuaong" />
+<img src="assets/header.svg" width="100%" alt="Phuriphat Chantiuaong, Software Engineering Student, with a pixel pixie flying across a dreamy night sky" />
 
 <img src="https://readme-typing-svg.demolab.com?font=Fraunces&size=22&duration=3200&pause=900&color=A77BF3&center=true&vCenter=true&width=520&lines=hello%2C+I'm+Phuriphat+%E2%98%81%EF%B8%8F;I+build+mobile+apps+%26+web+backends;from+a+Figma+frame+to+a+working+build" alt="typing intro" />
 
