@@ -13,6 +13,7 @@
 ### 🤝 Connect
 
 <a href="https://github.com/Phuriphat555"><img src="https://img.shields.io/badge/GitHub-1b1530?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+<a href="mailto:qssomme@gmail.com"><img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail" /></a>
 
 </div>
 
