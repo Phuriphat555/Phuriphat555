@@ -44,8 +44,8 @@
 
 *Send a message to my guild hall*
 
-<a href="https://github.com/Phuriphat555"><img src="https://img.shields.io/badge/GitHub-Phuriphat555-c4a8ff?style=for-the-badge&logo=github&logoColor=white&labelColor=1d1638" alt="GitHub: Phuriphat555" /></a>
-<a href="mailto:qssomme@gmail.com"><img src="https://img.shields.io/badge/Gmail-qssomme@gmail.com-ff9cc5?style=for-the-badge&logo=gmail&logoColor=white&labelColor=1d1638" alt="Gmail: qssomme@gmail.com" /></a>
+<a href="https://github.com/Phuriphat555"><img src="assets/connect-github.svg" width="48%" alt="GitHub: @Phuriphat555. Follow my adventures." /></a>
+<a href="mailto:qssomme@gmail.com"><img src="assets/connect-gmail.svg" width="48%" alt="Gmail: qssomme@gmail.com. Send me a letter." /></a>
 
 </div>
 

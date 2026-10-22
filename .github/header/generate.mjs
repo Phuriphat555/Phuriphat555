@@ -328,6 +328,48 @@ ${pixie}
 </svg>`;
 }
 
+// ---------- connect cards ----------
+
+const CONNECT = [
+  {
+    file: 'connect-github', title: 'GitHub', handle: '@Phuriphat555', cta: 'FOLLOW MY ADVENTURES', color: '#c4a8ff',
+    icon: ['.X.....X.', '.XX...XX.', '.XXXXXXX.', 'XXEXXXEXX', 'XXXXXXXXX', '.XXXXXXX.', '..X...X..'],
+  },
+  {
+    file: 'connect-gmail', title: 'Gmail', handle: 'qssomme@gmail.com', cta: 'SEND ME A LETTER', color: '#ff9cc5',
+    icon: ['XXXXXXXXX', 'XX.....XX', 'X.X...X.X', 'X..XHX..X', 'X...H...X', 'XXXXXXXXX'],
+  },
+];
+
+function connectCard(c) {
+  const CW = 430, CH = 120;
+  const icon = sprite(c.icon, { X: '#ffffff', E: '#1d1638', H: '#ff6b9a' }, 6, 50 - 27, 60 - c.icon.length * 3);
+  const sparkles = [[18, 22], [86, 26], [80, 98], [14, 92]]
+    .map(([x, y], i) => `<g class="tw" style="animation-duration:${(1.2 + i * 0.35).toFixed(2)}s"><rect x="${x}" y="${y - 3}" width="2" height="8" fill="#fff4c2"/><rect x="${x - 3}" y="${y}" width="8" height="2" fill="#fff4c2"/></g>`).join('');
+  const ctaW = c.cta.length * 7.2 + 44;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${CW} ${CH}" width="${CW}" height="${CH}" font-family="${FONT}">
+<title>${c.title}: ${c.handle}</title>
+<defs>${skyGradient('cg', false)}<clipPath id="cc"><rect width="${CW}" height="${CH}" rx="16"/></clipPath>
+  <linearGradient id="cbg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#211a3d"/><stop offset="1" stop-color="#1a1530"/></linearGradient></defs>
+<style>${SKY_STYLE}
+  .nudge{animation:nudge .9s ease-in-out infinite alternate}
+  @keyframes nudge{to{transform:translateX(4px)}}
+</style>
+<g clip-path="url(#cc)">
+  <rect width="${CW}" height="${CH}" fill="url(#cbg)"/>
+  <rect width="100" height="${CH}" fill="url(#cg)"/>
+  ${sparkles}
+  <g class="bob">${icon}</g>
+</g>
+<text x="122" y="40" font-size="20" font-weight="700" fill="#ffffff">${c.title}</text>
+<text x="122" y="62" font-size="13" fill="${c.color}" font-family="${MONO}">${c.handle}</text>
+<rect x="122" y="76" width="${ctaW}" height="26" rx="13" fill="${c.color}"/>
+<text x="138" y="93" font-size="11" font-weight="700" fill="#1d1638" letter-spacing="1.2" font-family="${MONO}">${c.cta}</text>
+<g class="nudge"><text x="${122 + ctaW - 22}" y="94" font-size="13" font-weight="700" fill="#1d1638">→</text></g>
+<rect x=".5" y=".5" width="${CW - 1}" height="${CH - 1}" rx="16" fill="none" stroke="${c.color}" stroke-opacity=".6"/>
+</svg>`;
+}
+
 // ---------- quest board ----------
 
 const QUESTS = {
@@ -549,4 +591,8 @@ for (const [file, svg] of [['header', header()], ['footer', footer()], ['charact
 for (const p of PROJECTS) {
   writeFileSync(`assets/${p.file}.svg`, projectCard(p));
   console.log(`assets/${p.file}.svg written`);
+}
+for (const c of CONNECT) {
+  writeFileSync(`assets/${c.file}.svg`, connectCard(c));
+  console.log(`assets/${c.file}.svg written`);
 }
