@@ -12,21 +12,9 @@
 
 ### ☁️ About Me
 
+<img src="assets/about.svg" width="100%" alt="About me. 4th-year Software Engineering student at Mae Fah Luang University (MFU), Chiang Rai, Thailand. Studying Software Engineering, now in my final year. Web and backend with React, Node.js and NestJS. Mobile with React Native and Flutter. Games with Unity, C# and C++. Security labs on the OWASP Top 10. Reach me at qssomme@gmail.com." />
+
 </div>
-
-<img src="assets/pixie-laptop.svg" align="right" width="200" alt="A pixel pixie hovering over a laptop while code types itself on the screen" />
-
-I'm a **4th-year Software Engineering student at Mae Fah Luang University (MFU)** in Chiang Rai, Thailand. I like taking an idea all the way through: sketching the screens in Figma, writing the app, wiring up the API and testing it until it holds together. I'm self-motivated and always picking up something new, from mobile frameworks to game engines.
-
-- 🎓 **Studying:** Software Engineering at MFU, now in my final year
-- 🌐 **Web & backend:** building with React, Node.js and NestJS, and testing APIs in Postman
-- 📱 **Mobile:** shipped a React Native app with Expo and worked in a team on a Flutter app
-- 🎮 **Games:** made a Monster Hunter companion app and I'm exploring Unity with C# and C++
-- 🔐 **Security:** practising secure coding against the OWASP Top 10 in hands-on labs
-- 🌱 **Right now:** sharpening my backend skills and looking for projects to learn from
-- 📫 **Reach me:** [qssomme@gmail.com](mailto:qssomme@gmail.com)
-
-<br clear="right" />
 
 <img src="assets/divider.svg" width="100%" alt="" />
 

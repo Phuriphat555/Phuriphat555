@@ -281,6 +281,53 @@ ${code}
 </svg>`;
 }
 
+// ---------- About Me card ----------
+
+const ABOUT_ROWS = [
+  ['Studying', 'Software Engineering at MFU, now in my final year', '#ffd66b'],
+  ['Web &amp; backend', 'React, Node.js and NestJS, testing APIs in Postman', '#c4a8ff'],
+  ['Mobile', 'shipped a React Native app with Expo and a team Flutter app', '#ff9cc5'],
+  ['Games', 'a Monster Hunter companion app, exploring Unity with C# and C++', '#8fc7ff'],
+  ['Security', 'secure coding against the OWASP Top 10 in hands-on labs', '#9fe3c4'],
+  ['Right now', 'sharpening my backend skills and looking for projects', '#ffb27a'],
+  ['Reach me', 'qssomme@gmail.com', '#ff9cc5'],
+];
+const ABOUT_TEXT = [
+  'I like taking an idea all the way through: sketching the screens in Figma,',
+  'writing the app, wiring up the API and testing it until it holds together.',
+  'Self-motivated and always picking up something new.',
+];
+
+function aboutCard() {
+  const H = 400, L = 36;
+  const rows = ABOUT_ROWS.map(([label, text, color], i) => {
+    const y = 196 + i * 27;
+    return `<g>${sprite(['.X.', 'XXX', '.X.'], { X: color }, 3, L, y - 10)}<text x="${L + 18}" y="${y}" font-size="13.5" font-weight="700" fill="${color}">${label}</text><text x="${L + 140}" y="${y}" font-size="13.5" fill="#d9d2f2">${text}</text></g>`;
+  }).join('\n');
+  const pixie = pixieLaptop()
+    .replace(/<svg [^>]*>/, '<svg x="636" y="70" width="240" height="240" viewBox="0 0 260 260">')
+    .replace(/<title>.*?<\/title>/, '');
+  const intro = ABOUT_TEXT.map((t, i) => `<text x="${L}" y="${116 + i * 21}" font-size="14" fill="#c2b9e3">${t}</text>`).join('\n');
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="100%" font-family="${FONT}">
+<title>About me: 4th-year Software Engineering student at Mae Fah Luang University, Chiang Rai, Thailand</title>
+<defs><clipPath id="ab"><rect width="${W}" height="${H}" rx="18"/></clipPath>
+  <linearGradient id="abg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#211a3d"/><stop offset="1" stop-color="#1a1530"/></linearGradient>
+  ${skyGradient('abar', false)}</defs>
+<g clip-path="url(#ab)">
+  <rect width="${W}" height="${H}" fill="url(#abg)"/>
+  <rect width="${W}" height="6" fill="url(#abar)"/>
+  ${starField(12, H, (x, y) => x < 610 || y < 20)}
+</g>
+<text x="${L}" y="56" font-size="26" font-weight="700" fill="#ffffff">Hi, I'm Phuriphat <tspan fill="#ffd66b">✦</tspan></text>
+<text x="${L}" y="84" font-size="13.5" font-weight="700" fill="#c4a8ff">4th-year Software Engineering · Mae Fah Luang University (MFU) · Chiang Rai, Thailand</text>
+${intro}
+<rect x="${L}" y="172" width="570" height="1" fill="#3a3160"/>
+${rows}
+${pixie}
+<rect x=".5" y=".5" width="${W - 1}" height="${H - 1}" rx="18" fill="none" stroke="#c4a8ff" stroke-opacity=".35"/>
+</svg>`;
+}
+
 // ---------- quest board ----------
 
 const QUESTS = {
@@ -495,7 +542,7 @@ ${p.chips.map((c, i) => `<rect x="${chipsX[i]}" y="142" width="${c.length * 6.6 
 }
 
 mkdirSync('assets', { recursive: true });
-for (const [file, svg] of [['header', header()], ['footer', footer()], ['character', character()], ['pixie-laptop', pixieLaptop()], ['quest-log', questBoard()], ['inventory', await inventory()], ['divider', divider()]]) {
+for (const [file, svg] of [['header', header()], ['footer', footer()], ['character', character()], ['pixie-laptop', pixieLaptop()], ['quest-log', questBoard()], ['inventory', await inventory()], ['divider', divider()], ['about', aboutCard()]]) {
   writeFileSync(`assets/${file}.svg`, svg);
   console.log(`assets/${file}.svg written (${svg.length} bytes)`);
 }
