@@ -25,9 +25,9 @@
 
 **Languages**
 
-<img src="https://skillicons.dev/icons?i=js,ts,py,java,cs,dart" alt="JavaScript, TypeScript, Python, Java, C#, Dart" />
+<img src="https://skillicons.dev/icons?i=js,ts,py,java,cs,cpp,dart" alt="JavaScript, TypeScript, Python, Java, C#, C++, Dart" />
 
-**Frontend, Mobile & Design**
+**Web, Mobile & Design**
 
 <img src="https://skillicons.dev/icons?i=react,flutter,figma" alt="React, React Native, Flutter, Figma" />
 
@@ -35,9 +35,19 @@
 
 <img src="https://skillicons.dev/icons?i=nodejs,nestjs" alt="Node.js, NestJS" />
 
+**Game Development**
+
+<img src="https://skillicons.dev/icons?i=unity" alt="Unity" />
+
 **Tools**
 
-<img src="https://skillicons.dev/icons?i=git,github,vscode,postman,docker" alt="Git, GitHub, VS Code, Postman, Docker" />
+<img src="https://skillicons.dev/icons?i=git,github,gitlab,vscode,postman,docker" alt="Git, GitHub, GitLab, VS Code, Postman, Docker" />
+
+**Strengths**
+
+<img src="https://img.shields.io/badge/Web_Development-c4a8ff?style=flat-square&labelColor=1b1530" alt="Web development" />
+<img src="https://img.shields.io/badge/Self--Motivated-ffc9dd?style=flat-square&labelColor=1b1530" alt="Self-motivated" />
+<img src="https://img.shields.io/badge/Continuous_Learner-bfe3ff?style=flat-square&labelColor=1b1530" alt="Continuous learner" />
 
 </div>
 
