@@ -6,7 +6,7 @@
 
 </div>
 
----
+<img src="assets/divider.svg" width="100%" alt="" />
 
 <div align="center">
 
@@ -50,7 +50,7 @@ const phuriphat: Developer = {
 };
 ```
 
----
+<img src="assets/divider.svg" width="100%" alt="" />
 
 <div align="center">
 
@@ -60,75 +60,40 @@ const phuriphat: Developer = {
 
 </div>
 
----
+<img src="assets/divider.svg" width="100%" alt="" />
 
 <div align="center">
 
 ### 📜 Quest Log
 
+<img src="assets/quest-log.svg" width="100%" alt="Quest log. Main quest: graduate in Software Engineering at Mae Fah Luang University, year 4 of 4. Active: NestJS REST API, first Unity game, full-stack web app, first open-source contribution. Completed: Monster Hunter Info React Native app, Bento Flutter team app, OWASP security labs, GitHub profile." />
+
 </div>
 
-**Main quest**
-- [ ] 🎓 Graduate in Software Engineering
-
-**Active quests**
-- [ ] ⚙️ Build a full REST API with NestJS, from auth to deployment
-- [ ] 🎮 Finish my first playable game in Unity
-- [ ] 🌐 Ship a full-stack web app with React and Node.js
-- [ ] 🤝 Make my first open-source contribution
-
-**Completed**
-- [x] 📱 Ship a React Native app: [Monster Hunter Info](https://github.com/Phuriphat555/Final-Exam)
-- [x] 👥 Build a Flutter app as a team: [Bento Goal App](https://github.com/Phuriphat555/Challenge-Goal-App)
-- [x] 🔐 Take on hands-on OWASP security labs
-- [x] ✨ Design my GitHub profile
-
----
+<img src="assets/divider.svg" width="100%" alt="" />
 
 <div align="center">
 
 ### 🤝 Connect
 
-<a href="https://github.com/Phuriphat555"><img src="https://img.shields.io/badge/GitHub-1b1530?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
-<a href="mailto:qssomme@gmail.com"><img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail" /></a>
+*Send a message to my guild hall*
+
+<a href="https://github.com/Phuriphat555"><img src="https://img.shields.io/badge/GitHub-Phuriphat555-c4a8ff?style=for-the-badge&logo=github&logoColor=white&labelColor=1d1638" alt="GitHub: Phuriphat555" /></a>
+<a href="mailto:qssomme@gmail.com"><img src="https://img.shields.io/badge/Gmail-qssomme@gmail.com-ff9cc5?style=for-the-badge&logo=gmail&logoColor=white&labelColor=1d1638" alt="Gmail: qssomme@gmail.com" /></a>
 
 </div>
 
----
+<img src="assets/divider.svg" width="100%" alt="" />
 
 <div align="center">
 
-### 💻 Tech Stack
+### 🎒 Tech Stack · Inventory
 
-**Languages**
-
-<img src="https://skillicons.dev/icons?i=js,ts,py,java,cs,cpp,dart" alt="JavaScript, TypeScript, Python, Java, C#, C++, Dart" />
-
-**Web, Mobile & Design**
-
-<img src="https://skillicons.dev/icons?i=react,flutter,figma" alt="React, React Native, Flutter, Figma" />
-
-**Backend**
-
-<img src="https://skillicons.dev/icons?i=nodejs,nestjs" alt="Node.js, NestJS" />
-
-**Game Development**
-
-<img src="https://skillicons.dev/icons?i=unity" alt="Unity" />
-
-**Tools**
-
-<img src="https://skillicons.dev/icons?i=git,github,gitlab,vscode,postman,docker" alt="Git, GitHub, GitLab, VS Code, Postman, Docker" />
-
-**Strengths**
-
-<img src="https://img.shields.io/badge/Web_Development-c4a8ff?style=flat-square&labelColor=1b1530" alt="Web development" />
-<img src="https://img.shields.io/badge/Self--Motivated-ffc9dd?style=flat-square&labelColor=1b1530" alt="Self-motivated" />
-<img src="https://img.shields.io/badge/Continuous_Learner-bfe3ff?style=flat-square&labelColor=1b1530" alt="Continuous learner" />
+<img src="assets/inventory.svg" width="100%" alt="Inventory. Languages: JavaScript, TypeScript, Python, Java, C#, C++, Dart. Web, mobile and design: React, Flutter, Figma. Backend: Node.js, NestJS. Game dev: Unity. Tools: Git, GitHub, GitLab, VS Code, Postman, Docker. Passive skills: web development, self-motivated, continuous learner." />
 
 </div>
 
----
+<img src="assets/divider.svg" width="100%" alt="" />
 
 <div align="center">
 
@@ -140,7 +105,7 @@ const phuriphat: Developer = {
 
 </div>
 
----
+<img src="assets/divider.svg" width="100%" alt="" />
 
 <div align="center">
 
@@ -156,7 +121,7 @@ const phuriphat: Developer = {
 
 </div>
 
----
+<img src="assets/divider.svg" width="100%" alt="" />
 
 <div align="center">
 

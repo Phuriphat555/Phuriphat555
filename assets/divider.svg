@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 28" width="100%">
+<defs><linearGradient id="dl" x1="0" x2="1"><stop offset="0" stop-color="#c4a8ff" stop-opacity="0"/><stop offset=".3" stop-color="#c4a8ff"/><stop offset=".5" stop-color="#ff9cc5"/><stop offset=".7" stop-color="#8fc7ff"/><stop offset="1" stop-color="#8fc7ff" stop-opacity="0"/></linearGradient></defs>
+<style>.tw{animation:tw 1.6s ease-in-out infinite alternate}@keyframes tw{from{opacity:.3}to{opacity:1}}</style>
+<rect x="0" y="13" width="416" height="2" fill="url(#dl)"/>
+<rect x="484" y="13" width="416" height="2" fill="url(#dl)"/>
+<rect x="424" y="12" width="4" height="4" fill="#c4a8ff"/>
+<rect x="472" y="12" width="4" height="4" fill="#8fc7ff"/>
+<g class="tw"><rect x="448.5" y="6.5" width="3" height="3" fill="#ffd66b"/><rect x="448.5" y="9.5" width="3" height="3" fill="#ffd66b"/><rect x="442.5" y="12.5" width="3" height="3" fill="#ffd66b"/><rect x="445.5" y="12.5" width="3" height="3" fill="#ffd66b"/><rect x="448.5" y="12.5" width="3" height="3" fill="#ffd66b"/><rect x="451.5" y="12.5" width="3" height="3" fill="#ffd66b"/><rect x="454.5" y="12.5" width="3" height="3" fill="#ffd66b"/><rect x="448.5" y="15.5" width="3" height="3" fill="#ffd66b"/><rect x="448.5" y="18.5" width="3" height="3" fill="#ffd66b"/></g>
+</svg>

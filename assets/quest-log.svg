@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="100%" font-family="'Segoe UI',Helvetica,Arial,sans-serif">
+<title>Quest log</title>
+<defs><clipPath id="qb"><rect width="900" height="500" rx="18"/></clipPath>
+  <linearGradient id="qbg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#211a3d"/><stop offset="1" stop-color="#1a1530"/></linearGradient></defs>
+<style>
+  .pulse{animation:pulse 1.6s ease-in-out infinite alternate}
+  @keyframes pulse{from{opacity:.35}to{opacity:1}}
+  .shine{animation:shine 1.4s ease-in-out infinite alternate}
+  @keyframes shine{from{opacity:.25}to{opacity:1}}
+</style>
+<g clip-path="url(#qb)"><rect width="900" height="500" fill="url(#qbg)"/><rect class="tw" style="animation-duration:2.09s;animation-delay:-2.62s" x="16" y="114" width="2" height="2" fill="#fff"/>
+  <rect class="tw" style="animation-duration:2.46s;animation-delay:-3.88s" x="39" y="82" width="2" height="2" fill="#fff"/>
+  <g class="tw" style="animation-duration:4.21s;animation-delay:-2.66s"><rect x="13" y="170" width="2" height="8" fill="#fff"/><rect x="10" y="173" width="8" height="2" fill="#fff"/></g>
+  <rect class="tw" style="animation-duration:4.57s;animation-delay:-3.23s" x="31" y="378" width="2" height="2" fill="#fff"/>
+  <rect class="tw" style="animation-duration:2.02s;animation-delay:-0.80s" x="37" y="285" width="2" height="2" fill="#fff"/>
+  <g class="tw" style="animation-duration:4.21s;animation-delay:-3.78s"><rect x="862" y="431" width="2" height="8" fill="#fff"/><rect x="859" y="434" width="8" height="2" fill="#fff"/></g>
+  <rect class="tw" style="animation-duration:2.12s;animation-delay:-0.86s" x="873" y="105" width="2" height="2" fill="#fff"/>
+  <rect class="tw" style="animation-duration:2.10s;animation-delay:-2.41s" x="28" y="444" width="2" height="2" fill="#fff"/>
+  <rect class="tw" style="animation-duration:2.06s;animation-delay:-0.73s" x="10" y="360" width="2" height="2" fill="#fff"/>
+  <rect class="tw" style="animation-duration:3.26s;animation-delay:-0.14s" x="877" y="294" width="2" height="2" fill="#fff"/></g>
+<text x="36" y="34" font-size="12" font-weight="700" fill="#ffd66b" letter-spacing="2.5" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">★ MAIN QUEST</text>
+<rect x="24" y="48" width="852" height="66" rx="12" fill="#2a2148" stroke="#ffd66b" stroke-opacity=".45"/>
+<rect x="36" y="64" width="4" height="4" fill="#ffd66b"/><rect x="44" y="64" width="4" height="4" fill="#ffd66b"/><rect x="52" y="64" width="4" height="4" fill="#ffd66b"/><rect x="36" y="68" width="4" height="4" fill="#ffd66b"/><rect x="40" y="68" width="4" height="4" fill="#ffd66b"/><rect x="44" y="68" width="4" height="4" fill="#ffd66b"/><rect x="48" y="68" width="4" height="4" fill="#ffd66b"/><rect x="52" y="68" width="4" height="4" fill="#ffd66b"/><rect x="36" y="72" width="4" height="4" fill="#ffd66b"/><rect x="40" y="72" width="4" height="4" fill="#ffd66b"/><rect x="44" y="72" width="4" height="4" fill="#ffd66b"/><rect x="48" y="72" width="4" height="4" fill="#ffd66b"/><rect x="52" y="72" width="4" height="4" fill="#ffd66b"/>
+<text x="68" y="72" font-size="17" font-weight="700" fill="#ffffff">Graduate in Software Engineering</text>
+<text x="68" y="92" font-size="12" fill="#c2b9e3">Mae Fah Luang University · Year 4 of 4</text>
+<rect x="600" y="78" width="60" height="12" rx="3" fill="#ffd66b"/>
+<rect x="666" y="78" width="60" height="12" rx="3" fill="#ffd66b"/>
+<rect x="732" y="78" width="60" height="12" rx="3" fill="#ffd66b"/>
+<rect x="798" y="78" width="60" height="12" rx="3" fill="#3a3160"/>
+<rect class="shine" x="798" y="78" width="60" height="12" rx="3" fill="#ffd66b"/>
+<text x="864" y="68" text-anchor="end" font-size="10.5" font-weight="700" fill="#ffd66b" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">FINAL YEAR</text>
+<text x="36" y="152" font-size="12" font-weight="700" fill="#ff9cc5" letter-spacing="2.5" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">◆ ACTIVE QUESTS</text>
+<g class="pulse" style="animation-delay:-0.0s"><rect x="40" y="181" width="12" height="12" transform="rotate(45 46 187)" fill="none" stroke="#ff9cc5" stroke-width="2"/></g>
+<text x="68" y="192" font-size="14.5" fill="#f1ecff">Build a full REST API with NestJS, from auth to deployment</text>
+<rect x="679" y="179" width="65" height="19" rx="9.5" fill="#2a2345"/><text x="736" y="193" text-anchor="end" font-size="10.5" font-weight="700" fill="#c4a8ff" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">BACKEND</text>
+<rect x="771" y="179" width="93" height="19" rx="9.5" fill="#ff9cc5"/><text x="856" y="193" text-anchor="end" font-size="10.5" font-weight="700" fill="#1d1638" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">IN PROGRESS</text>
+<g class="pulse" style="animation-delay:-0.4s"><rect x="40" y="215" width="12" height="12" transform="rotate(45 46 221)" fill="none" stroke="#ff9cc5" stroke-width="2"/></g>
+<text x="68" y="226" font-size="14.5" fill="#f1ecff">Finish my first playable game in Unity</text>
+<rect x="672" y="213" width="72" height="19" rx="9.5" fill="#2a2345"/><text x="736" y="227" text-anchor="end" font-size="10.5" font-weight="700" fill="#c4a8ff" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">GAME DEV</text>
+<rect x="771" y="213" width="93" height="19" rx="9.5" fill="#ff9cc5"/><text x="856" y="227" text-anchor="end" font-size="10.5" font-weight="700" fill="#1d1638" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">IN PROGRESS</text>
+<g class="pulse" style="animation-delay:-0.8s"><rect x="40" y="249" width="12" height="12" transform="rotate(45 46 255)" fill="none" stroke="#ff9cc5" stroke-width="2"/></g>
+<text x="68" y="260" font-size="14.5" fill="#f1ecff">Ship a full-stack web app with React and Node.js</text>
+<rect x="707" y="247" width="37" height="19" rx="9.5" fill="#2a2345"/><text x="736" y="261" text-anchor="end" font-size="10.5" font-weight="700" fill="#c4a8ff" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">WEB</text>
+<rect x="771" y="247" width="93" height="19" rx="9.5" fill="#ff9cc5"/><text x="856" y="261" text-anchor="end" font-size="10.5" font-weight="700" fill="#1d1638" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">IN PROGRESS</text>
+<g class="pulse" style="animation-delay:-1.2s"><rect x="40" y="283" width="12" height="12" transform="rotate(45 46 289)" fill="none" stroke="#ff9cc5" stroke-width="2"/></g>
+<text x="68" y="294" font-size="14.5" fill="#f1ecff">Make my first open-source contribution</text>
+<rect x="665" y="281" width="79" height="19" rx="9.5" fill="#2a2345"/><text x="736" y="295" text-anchor="end" font-size="10.5" font-weight="700" fill="#c4a8ff" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">COMMUNITY</text>
+<rect x="771" y="281" width="93" height="19" rx="9.5" fill="#ff9cc5"/><text x="856" y="295" text-anchor="end" font-size="10.5" font-weight="700" fill="#1d1638" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">IN PROGRESS</text>
+<text x="36" y="330" font-size="12" font-weight="700" fill="#9fe3c4" letter-spacing="2.5" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">✓ COMPLETED</text>
+<rect x="52" y="357" width="3" height="3" fill="#9fe3c4"/><rect x="49" y="360" width="3" height="3" fill="#9fe3c4"/><rect x="52" y="360" width="3" height="3" fill="#9fe3c4"/><rect x="37" y="363" width="3" height="3" fill="#9fe3c4"/><rect x="46" y="363" width="3" height="3" fill="#9fe3c4"/><rect x="49" y="363" width="3" height="3" fill="#9fe3c4"/><rect x="37" y="366" width="3" height="3" fill="#9fe3c4"/><rect x="40" y="366" width="3" height="3" fill="#9fe3c4"/><rect x="43" y="366" width="3" height="3" fill="#9fe3c4"/><rect x="46" y="366" width="3" height="3" fill="#9fe3c4"/><rect x="40" y="369" width="3" height="3" fill="#9fe3c4"/><rect x="43" y="369" width="3" height="3" fill="#9fe3c4"/>
+<text x="68" y="370" font-size="14.5" fill="#c2b9e3">Ship a React Native app: Monster Hunter Info</text>
+<rect x="686" y="357" width="58" height="19" rx="9.5" fill="#2a2345"/><text x="736" y="371" text-anchor="end" font-size="10.5" font-weight="700" fill="#c4a8ff" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">MOBILE</text>
+<rect x="813" y="357" width="51" height="19" rx="9.5" fill="#9fe3c4"/><text x="856" y="371" text-anchor="end" font-size="10.5" font-weight="700" fill="#1d1638" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">CLEAR</text>
+<rect x="52" y="391" width="3" height="3" fill="#9fe3c4"/><rect x="49" y="394" width="3" height="3" fill="#9fe3c4"/><rect x="52" y="394" width="3" height="3" fill="#9fe3c4"/><rect x="37" y="397" width="3" height="3" fill="#9fe3c4"/><rect x="46" y="397" width="3" height="3" fill="#9fe3c4"/><rect x="49" y="397" width="3" height="3" fill="#9fe3c4"/><rect x="37" y="400" width="3" height="3" fill="#9fe3c4"/><rect x="40" y="400" width="3" height="3" fill="#9fe3c4"/><rect x="43" y="400" width="3" height="3" fill="#9fe3c4"/><rect x="46" y="400" width="3" height="3" fill="#9fe3c4"/><rect x="40" y="403" width="3" height="3" fill="#9fe3c4"/><rect x="43" y="403" width="3" height="3" fill="#9fe3c4"/>
+<text x="68" y="404" font-size="14.5" fill="#c2b9e3">Build a Flutter app as a team: Bento Goal App</text>
+<rect x="672" y="391" width="72" height="19" rx="9.5" fill="#2a2345"/><text x="736" y="405" text-anchor="end" font-size="10.5" font-weight="700" fill="#c4a8ff" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">TEAMWORK</text>
+<rect x="813" y="391" width="51" height="19" rx="9.5" fill="#9fe3c4"/><text x="856" y="405" text-anchor="end" font-size="10.5" font-weight="700" fill="#1d1638" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">CLEAR</text>
+<rect x="52" y="425" width="3" height="3" fill="#9fe3c4"/><rect x="49" y="428" width="3" height="3" fill="#9fe3c4"/><rect x="52" y="428" width="3" height="3" fill="#9fe3c4"/><rect x="37" y="431" width="3" height="3" fill="#9fe3c4"/><rect x="46" y="431" width="3" height="3" fill="#9fe3c4"/><rect x="49" y="431" width="3" height="3" fill="#9fe3c4"/><rect x="37" y="434" width="3" height="3" fill="#9fe3c4"/><rect x="40" y="434" width="3" height="3" fill="#9fe3c4"/><rect x="43" y="434" width="3" height="3" fill="#9fe3c4"/><rect x="46" y="434" width="3" height="3" fill="#9fe3c4"/><rect x="40" y="437" width="3" height="3" fill="#9fe3c4"/><rect x="43" y="437" width="3" height="3" fill="#9fe3c4"/>
+<text x="68" y="438" font-size="14.5" fill="#c2b9e3">Take on hands-on OWASP security labs</text>
+<rect x="672" y="425" width="72" height="19" rx="9.5" fill="#2a2345"/><text x="736" y="439" text-anchor="end" font-size="10.5" font-weight="700" fill="#c4a8ff" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">SECURITY</text>
+<rect x="813" y="425" width="51" height="19" rx="9.5" fill="#9fe3c4"/><text x="856" y="439" text-anchor="end" font-size="10.5" font-weight="700" fill="#1d1638" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">CLEAR</text>
+<rect x="52" y="459" width="3" height="3" fill="#9fe3c4"/><rect x="49" y="462" width="3" height="3" fill="#9fe3c4"/><rect x="52" y="462" width="3" height="3" fill="#9fe3c4"/><rect x="37" y="465" width="3" height="3" fill="#9fe3c4"/><rect x="46" y="465" width="3" height="3" fill="#9fe3c4"/><rect x="49" y="465" width="3" height="3" fill="#9fe3c4"/><rect x="37" y="468" width="3" height="3" fill="#9fe3c4"/><rect x="40" y="468" width="3" height="3" fill="#9fe3c4"/><rect x="43" y="468" width="3" height="3" fill="#9fe3c4"/><rect x="46" y="468" width="3" height="3" fill="#9fe3c4"/><rect x="40" y="471" width="3" height="3" fill="#9fe3c4"/><rect x="43" y="471" width="3" height="3" fill="#9fe3c4"/>
+<text x="68" y="472" font-size="14.5" fill="#c2b9e3">Design my GitHub profile</text>
+<rect x="686" y="459" width="58" height="19" rx="9.5" fill="#2a2345"/><text x="736" y="473" text-anchor="end" font-size="10.5" font-weight="700" fill="#c4a8ff" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">DESIGN</text>
+<rect x="813" y="459" width="51" height="19" rx="9.5" fill="#9fe3c4"/><text x="856" y="473" text-anchor="end" font-size="10.5" font-weight="700" fill="#1d1638" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">CLEAR</text>
+<rect x=".5" y=".5" width="899" height="499" rx="18" fill="none" stroke="#c4a8ff" stroke-opacity=".35"/>
+</svg>
