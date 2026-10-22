@@ -107,7 +107,7 @@ const PALETTES = {
     helm: '#8a5cf6', skin: '#ffd7b8', armor: '#e2679a', sword: '#9fd3ff', boot: '#2c2547',
   },
   dark: {
-    tile: '#1f1a33', ink: '#f1ecff', soft: '#9a92c0', exp: '#ffd66b', expTrack: '#2a2345',
+    tile: '#2c2450', ink: '#f1ecff', soft: '#9a92c0', exp: '#ffd66b', expTrack: '#352c58',
     slime: ['#4b3a80', '#6d4fc0', '#9a77f0', '#c4a8ff'], eye: '#15122b', slash: '#bfe3ff', dmg: '#ff9cc5', lvup: '#ffd66b',
     helm: '#c4a8ff', skin: '#ffd7b8', armor: '#ff9cc5', sword: '#bfe3ff', boot: '#0d0b1a',
   },
@@ -214,21 +214,25 @@ function render(tl, c) {
   const font = 'ui-monospace,SFMono-Regular,Menlo,Consolas,monospace';
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" font-family="${font}">
 <title>${USER} contribution MMORPG</title>
+${CARD(W, H)[0]}
 <style>.pop{transform-box:fill-box;transform-origin:center}.xpfill{transform-box:fill-box;transform-origin:left}${css.join('')}</style>
 <text x="${LEFT}" y="24" font-size="13" font-weight="700" fill="${c.ink}">${USER}</text>
 ${hud.join('\n')}
+<text x="${LEFT + 8 * USER.length + 74}" y="24" font-size="10" font-weight="700" fill="${c.soft}">HP</text>
+<rect x="${LEFT + 8 * USER.length + 92}" y="15" width="90" height="10" rx="5" fill="${c.dmg}"/>
 <text x="${W - LEFT}" y="24" text-anchor="end" font-size="11" fill="${c.soft}">${tl.total} EXP · ${tl.monsters.length} slimes in the last year</text>
 ${els.join('\n')}
 <text x="${LEFT}" y="${barY + 7}" font-size="9" font-weight="700" fill="${c.soft}">EXP</text>
 <rect x="${barX}" y="${barY}" width="${barW}" height="8" rx="4" fill="${c.expTrack}"/>
 <rect class="xp xpfill" x="${barX}" y="${barY}" width="${barW}" height="8" rx="4" fill="${c.exp}"/>
+${CARD(W, H)[1]}
 </svg>`;
 }
 
 // ---------- weekly activity chart ----------
 
 function renderActivity(days, c) {
-  const W = 860, H = 240, L = 44, R = 20, T = 46, B = 40;
+  const W = 860, H = 250, L = 50, R = 28, T = 54, B = 42;
   const weeks = [];
   for (const d of days) {
     weeks[d.x] ??= { total: 0, date: d.date };
@@ -260,15 +264,85 @@ function renderActivity(days, c) {
 
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">
 <title>${USER} weekly contributions</title>
+${CARD(W, H)[0]}
 <defs><linearGradient id="fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${c.slime[2]}" stop-opacity=".55"/><stop offset="1" stop-color="${c.slime[2]}" stop-opacity="0"/></linearGradient></defs>
 <style>.draw{stroke-dasharray:4000;stroke-dashoffset:4000;animation:draw 2.4s ease-out forwards}@keyframes draw{to{stroke-dashoffset:0}}.fade{opacity:0;animation:fade .8s ease-out 1.4s forwards}@keyframes fade{to{opacity:1}}</style>
-<text x="${L}" y="22" font-size="13" font-weight="700" fill="${c.ink}">Weekly contributions</text>
-<text x="${W - R}" y="22" text-anchor="end" font-size="11" fill="${c.soft}">${total} in the last year · best week ${weeks[peak].total}</text>
+<text x="${L}" y="30" font-size="13" font-weight="700" fill="${c.ink}">Weekly contributions</text>
+<text x="${W - R}" y="30" text-anchor="end" font-size="11" fill="${c.soft}">${total} in the last year · best week ${weeks[peak].total}</text>
 ${grid}
 ${months.join('')}
 <path class="fade" d="${area}" fill="url(#fill)"/>
 <path class="draw" d="${line}" fill="none" stroke="${c.dmg}" stroke-width="2" stroke-linejoin="round"/>
 <g class="fade">${dots}</g>
+${CARD(W, H)[1]}
+</svg>`;
+}
+
+// ---------- adventurer stats card ----------
+
+const CARD = (W, H) => [
+  `<defs><clipPath id="card"><rect width="${W}" height="${H}" rx="18"/></clipPath><linearGradient id="cardbg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#211a3d"/><stop offset="1" stop-color="#1a1530"/></linearGradient></defs><rect width="${W}" height="${H}" rx="18" fill="url(#cardbg)"/>`,
+  `<rect x=".5" y=".5" width="${W - 1}" height="${H - 1}" rx="18" fill="none" stroke="#c4a8ff" stroke-opacity=".35"/>`,
+];
+
+function pixels(rows, colors, px, ox, oy) {
+  let out = '';
+  rows.forEach((row, y) => [...row].forEach((ch, x) => {
+    if (colors[ch]) out += `<rect x="${ox + x * px}" y="${oy + y * px}" width="${px}" height="${px}" fill="${colors[ch]}"/>`;
+  }));
+  return out;
+}
+
+function streaks(days) {
+  const sorted = [...days].sort((a, b) => a.date.localeCompare(b.date));
+  let best = { len: 0 }, run = null;
+  for (const d of sorted) {
+    if (d.count > 0) {
+      run = run ? { ...run, len: run.len + 1, end: d.date } : { len: 1, start: d.date, end: d.date };
+      if (run.len > best.len) best = run;
+    } else run = null;
+  }
+  // today may not have a contribution yet, so the current streak can end yesterday
+  let i = sorted.length - 1;
+  if (sorted[i]?.count === 0) i--;
+  let cur = 0;
+  while (i >= 0 && sorted[i].count > 0) { cur++; i--; }
+  return { best, cur };
+}
+
+const fmt = (iso) => new Date(iso + 'T00:00:00Z').toLocaleDateString('en', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+
+function renderStats(days) {
+  const W = 860, H = 170;
+  const total = days.reduce((s, d) => s + d.count, 0);
+  const active = days.filter((d) => d.count > 0).length;
+  const { best, cur } = streaks(days);
+  const weeks = [];
+  for (const d of days) weeks[d.x] = (weeks[d.x] ?? 0) + d.count;
+  const blocks = [
+    ['TOTAL EXP', String(total), 'contributions this year', '#c4a8ff', ['..Y..', '.YYY.', 'YYYYY', '.YYY.', '..Y..'], '#c4a8ff'],
+    ['CURRENT STREAK', `${cur}d`, cur ? 'keep the fire going' : 'start a new streak', '#ff9cc5', ['..R..', '.RR..', '.RRR.', 'RRYRR', '.RYR.'], '#ff9cc5'],
+    ['LONGEST STREAK', `${best.len}d`, best.len ? `${fmt(best.start).replace(/, \d{4}$/, '')} – ${fmt(best.end)}` : '-', '#ffd66b', ['....Y', '...Y.', 'B.Y..', '.B...', 'B.B..'], '#ffd66b'],
+    ['BEST WEEK', String(Math.max(0, ...weeks.filter(Boolean))), 'contributions in one week', '#8fc7ff', ['YYYYY', 'Y.Y.Y', 'YYYYY', 'Y.Y.Y', 'YYYYY'], '#8fc7ff'],
+    ['ACTIVE DAYS', String(active), 'days with contributions', '#9fe3c4', ['Y...Y', '.Y.Y.', '..Y..', '.Y.Y.', 'Y...Y'].map((r) => r.replace(/Y/g, 'Y')), '#9fe3c4'],
+  ];
+  const bw = W / blocks.length;
+  const [bg, border] = CARD(W, H);
+  const body = blocks.map(([label, value, sub, color, icon, iconColor], i) => {
+    const cx = bw * i + bw / 2;
+    const flicker = label === 'CURRENT STREAK' ? ' class="flame"' : '';
+    return `<g${flicker}>${pixels(icon, { Y: iconColor, R: iconColor, B: '#c2b9e3' }, 4, cx - 10, 26)}</g>
+<text x="${cx}" y="88" text-anchor="middle" font-size="32" font-weight="700" fill="${color}" font-family="'Segoe UI',Helvetica,Arial,sans-serif">${value}</text>
+<text x="${cx}" y="112" text-anchor="middle" font-size="10.5" font-weight="700" fill="#f1ecff" letter-spacing="1.5">${label}</text>
+<text x="${cx}" y="132" text-anchor="middle" font-size="10" fill="#9a92c0">${sub}</text>
+${i ? `<rect x="${bw * i}" y="34" width="1" height="100" fill="#3a3160"/>` : ''}`;
+  }).join('\n');
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="100%" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">
+<title>${USER} contribution stats for the last year</title>
+<style>.flame{transform-box:fill-box;transform-origin:50% 100%;animation:flame .5s ease-in-out infinite alternate}@keyframes flame{to{transform:scaleY(1.15) scaleX(.92)}}</style>
+${bg}
+${body}
+${border}
 </svg>`;
 }
 
@@ -277,8 +351,10 @@ ${months.join('')}
 const days = await loadDays();
 const tl = buildTimeline(days);
 mkdirSync(OUT, { recursive: true });
-writeFileSync(`${OUT}/mmorpg-contribution.svg`, render(tl, PALETTES.light));
+// every card sits on the same dark dreamy panel, so both theme files use the dark palette
+writeFileSync(`${OUT}/mmorpg-contribution.svg`, render(tl, PALETTES.dark));
 writeFileSync(`${OUT}/mmorpg-contribution-dark.svg`, render(tl, PALETTES.dark));
-writeFileSync(`${OUT}/activity.svg`, renderActivity(days, PALETTES.light));
+writeFileSync(`${OUT}/activity.svg`, renderActivity(days, PALETTES.dark));
+writeFileSync(`${OUT}/stats.svg`, renderStats(days));
 writeFileSync(`${OUT}/activity-dark.svg`, renderActivity(days, PALETTES.dark));
 console.log(`${USER}: ${tl.monsters.length} slimes, ${tl.total} EXP, reached Lv. ${tl.finalLv}, loop ${tl.T.toFixed(1)}s`);

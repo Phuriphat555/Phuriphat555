@@ -99,9 +99,9 @@ const phuriphat: Developer = {
 
 ### 📂 Featured Projects
 
-<a href="https://github.com/Phuriphat555/Final-Exam"><img src="https://img.shields.io/badge/Monster_Hunter_Info-React_Native_%C2%B7_Expo_%C2%B7_TypeScript-c4a8ff?style=flat-square&labelColor=1b1530" alt="Monster Hunter Info: React Native, Expo, TypeScript" /></a>
-<a href="https://github.com/Phuriphat555/Challenge-Goal-App"><img src="https://img.shields.io/badge/Bento_Goal_App-Flutter_%C2%B7_Riverpod_%C2%B7_Dio-ffc9dd?style=flat-square&labelColor=1b1530" alt="Bento Goal App: Flutter, Riverpod, Dio" /></a>
-<a href="https://github.com/Phuriphat555/software-security"><img src="https://img.shields.io/badge/Software_Security_Labs-OWASP_%C2%B7_Docker-bfe3ff?style=flat-square&labelColor=1b1530" alt="Software Security Labs: OWASP, Docker" /></a>
+<a href="https://github.com/Phuriphat555/Final-Exam"><img src="assets/project-monster-hunter.svg" width="32%" alt="Monster Hunter Info: a companion app that keeps Monster Hunter game info one tap away. React Native, Expo, TypeScript." /></a>
+<a href="https://github.com/Phuriphat555/Challenge-Goal-App"><img src="assets/project-bento.svg" width="32%" alt="Bento Goal App: take on goals together with friends. Flutter, Riverpod, Dio. Team project." /></a>
+<a href="https://github.com/Phuriphat555/software-security"><img src="assets/project-security.svg" width="32%" alt="Software Security Labs: break-and-defend labs on the OWASP Top 10, run in Docker." /></a>
 
 </div>
 
@@ -109,9 +109,9 @@ const phuriphat: Developer = {
 
 <div align="center">
 
-### 📊 GitHub Stats
+### 📊 Adventurer Stats
 
-<img src="https://streak-stats.demolab.com?user=Phuriphat555&hide_border=true&background=00000000&ring=C4A8FF&fire=FF9CC5&currStreakNum=C4A8FF&sideNums=A77BF3&currStreakLabel=A77BF3&sideLabels=8F88AA&dates=8F88AA&stroke=8F88AA55" alt="GitHub streak" />
+<img src="https://raw.githubusercontent.com/Phuriphat555/Phuriphat555/output/stats.svg" width="100%" alt="Contribution stats for the last year: total EXP, current streak, longest streak, best week and active days" />
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Phuriphat555/Phuriphat555/output/activity-dark.svg" />

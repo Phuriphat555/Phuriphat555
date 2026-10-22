@@ -502,8 +502,60 @@ function divider() {
 </svg>`;
 }
 
+// ---------- project cards ----------
+
+const PROJECTS = [
+  {
+    file: 'project-monster-hunter', title: 'Monster Hunter Info', tag: 'SOLO · FINAL PROJECT', color: '#c4a8ff',
+    lines: ['A companion app that keeps Monster', 'Hunter game info one tap away.'],
+    chips: ['React Native', 'Expo', 'TypeScript'],
+    icon: ['.PPPPP.', '.PSSSP.', '.PSSSP.', '.PSSSP.', '.PSSSP.', '.PPPPP.', '.PPYPP.'],
+  },
+  {
+    file: 'project-bento', title: 'Bento Goal App', tag: 'TEAM PROJECT', color: '#ff9cc5',
+    lines: ['Take on goals together with friends', 'and grow your avatar along the way.'],
+    chips: ['Flutter', 'Riverpod', 'Dio'],
+    icon: ['YYYYYYY', 'YYYYYYY', '.YYYYY.', '..YYY..', '...Y...', '..YYY..', '.PPPPP.'],
+  },
+  {
+    file: 'project-security', title: 'Software Security Labs', tag: 'COURSEWORK', color: '#8fc7ff',
+    lines: ['Break-and-defend labs on the', 'OWASP Top 10, all run in Docker.'],
+    chips: ['OWASP', 'Docker', 'Python'],
+    icon: ['PPPPPPP', 'PSSSSSP', 'PSSYSSP', 'PSYYYSP', '.PSSSP.', '..PSP..', '...P...'],
+  },
+];
+
+function projectCard(p) {
+  const CW = 300, CH = 200;
+  const chipsX = [];
+  let cx = 18;
+  for (const c of p.chips) { chipsX.push(cx); cx += c.length * 6.6 + 22; }
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${CW} ${CH}" width="${CW}" height="${CH}" font-family="${FONT}">
+<title>${p.title}</title>
+<defs>${skyGradient('pg', false)}<clipPath id="pc"><rect width="${CW}" height="${CH}" rx="16"/></clipPath></defs>
+<style>${SKY_STYLE}</style>
+<g clip-path="url(#pc)">
+  <rect width="${CW}" height="${CH}" fill="#1d1638"/>
+  <rect width="${CW}" height="58" fill="url(#pg)"/>
+  ${starField(5, 50, (x) => (x / W) * CW < 64 || (x / W) * CW > 150).replace(/x="(\d+)"/g, (m, x) => `x="${Math.round((x / W) * CW)}"`)}
+  <g class="bob">${sprite(p.icon, { P: '#ffffff', S: '#1d1638', Y: '#ffd66b' }, 5, 18, 12)}</g>
+  <text x="${CW - 16}" y="24" text-anchor="end" font-size="9.5" font-weight="700" fill="#ffffff" letter-spacing="1.5" font-family="${MONO}">${p.tag}</text>
+</g>
+<text x="18" y="86" font-size="17" font-weight="700" fill="#ffffff">${p.title}</text>
+<text x="18" y="110" font-size="12.5" fill="#c2b9e3">${p.lines[0]}</text>
+<text x="18" y="127" font-size="12.5" fill="#c2b9e3">${p.lines[1]}</text>
+${p.chips.map((c, i) => `<rect x="${chipsX[i]}" y="142" width="${c.length * 6.6 + 14}" height="20" rx="10" fill="${p.color}" fill-opacity=".16" stroke="${p.color}" stroke-opacity=".55"/><text x="${chipsX[i] + 7}" y="156" font-size="11" font-weight="600" fill="${p.color}">${c}</text>`).join('')}
+<text x="${CW - 16}" y="186" text-anchor="end" font-size="11" font-weight="700" fill="#ffd66b" font-family="${MONO}">VIEW REPO →</text>
+<rect x=".5" y=".5" width="${CW - 1}" height="${CH - 1}" rx="16" fill="none" stroke="${p.color}" stroke-opacity=".5"/>
+</svg>`;
+}
+
 mkdirSync('assets', { recursive: true });
 for (const [file, svg] of [['header', header()], ['footer', footer()], ['character', character()], ['pixie-laptop', pixieLaptop()], ['terminal', terminal()], ['quest-log', questBoard()], ['inventory', await inventory()], ['divider', divider()]]) {
   writeFileSync(`assets/${file}.svg`, svg);
   console.log(`assets/${file}.svg written (${svg.length} bytes)`);
+}
+for (const p of PROJECTS) {
+  writeFileSync(`assets/${p.file}.svg`, projectCard(p));
+  console.log(`assets/${p.file}.svg written`);
 }
