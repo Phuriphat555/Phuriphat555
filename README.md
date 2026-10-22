@@ -28,28 +28,6 @@ I'm a **4th-year Software Engineering student at Mae Fah Luang University (MFU)*
 
 <br clear="right" />
 
-<img src="assets/terminal.svg" width="100%" alt="Terminal. whoami: Phuriphat Chantiuaong, 4th-year Software Engineering student at Mae Fah Luang University. Location: Chiang Rai, Thailand. Skills: web, mobile, backend, game-dev, security, design. Now: finishing my final year, building APIs with NestJS, making my first Unity game." />
-
-```ts
-const phuriphat: Developer = {
-  name: "Phuriphat Chantiuaong",
-  university: "Mae Fah Luang University (MFU)",
-  major: "Software Engineering",
-  year: 4,
-  location: "Chiang Rai, Thailand",
-  languages: ["JavaScript", "TypeScript", "Python", "Java", "C#", "C++", "Dart"],
-  stack: {
-    web: ["React", "Node.js", "NestJS"],
-    mobile: ["React Native", "Expo", "Flutter"],
-    gameDev: ["Unity"],
-    design: ["Figma"],
-  },
-  tools: ["Git", "GitHub", "GitLab", "VS Code", "Postman", "Docker"],
-  traits: ["self-motivated", "continuous learner"],
-  currentQuest: () => "Graduate and ship things people actually use",
-};
-```
-
 <img src="assets/divider.svg" width="100%" alt="" />
 
 <div align="center">

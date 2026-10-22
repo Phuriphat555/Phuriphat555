@@ -281,62 +281,6 @@ ${code}
 </svg>`;
 }
 
-// ---------- terminal that types out an introduction ----------
-
-const TERMINAL = [
-  ['whoami', ['Phuriphat Chantiuaong', '4th-year Software Engineering student @ Mae Fah Luang University']],
-  ['cat location.txt', ['Chiang Rai, Thailand']],
-  ['ls ~/skills', ['web/  mobile/  backend/  game-dev/  security/  design/']],
-  ['./now.sh', ['> finishing my final year', '> building APIs with NestJS', '> making my first Unity game']],
-];
-
-function terminal() {
-  const LH = 21, PAD = 22, TOP = 54;
-  const lines = TERMINAL.reduce((n, [, out]) => n + 1 + out.length, 1);
-  const H = TOP + lines * LH + 14;
-  const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-  const prompt = `<tspan fill="#ff9cc5">phuriphat@mfu</tspan><tspan fill="#9a92c0">:</tspan><tspan fill="#c4a8ff">~</tspan><tspan fill="#9a92c0">$ </tspan>`;
-  let t = 0.6, row = 0;
-  const out = [];
-  const at = (d) => `style="animation-delay:${d.toFixed(2)}s"`;
-  for (const [cmd, result] of TERMINAL) {
-    const y = TOP + row * LH;
-    const chars = [...cmd].map((ch, i) => `<tspan class="k" ${at(t + 0.35 + i * 0.07)}>${esc(ch)}</tspan>`).join('');
-    out.push(`<text class="c" ${at(t)} x="${PAD}" y="${y}">${prompt}<tspan fill="#ffffff">${chars}</tspan></text>`);
-    t += 0.35 + cmd.length * 0.07 + 0.35;
-    row++;
-    result.forEach((r, i) => {
-      const color = i === 0 && cmd === 'whoami' ? '#ffd66b' : '#c2b9e3';
-      out.push(`<text class="c" ${at(t + i * 0.12)} x="${PAD}" y="${TOP + row * LH}" fill="${color}"${i === 0 && cmd === 'whoami' ? ' font-weight="700"' : ''}>${esc(r)}</text>`);
-      row++;
-    });
-    t += result.length * 0.12 + 0.6;
-  }
-  const lastY = TOP + row * LH;
-  out.push(`<text class="c" ${at(t)} x="${PAD}" y="${lastY}">${prompt}<tspan class="cursor" fill="#ffffff">█</tspan></text>`);
-
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="100%" font-family="${MONO}" font-size="14">
-<title>whoami: Phuriphat Chantiuaong, 4th-year Software Engineering student at Mae Fah Luang University</title>
-<defs>${skyGradient('bar', false)}<clipPath id="win"><rect width="${W}" height="${H}" rx="14"/></clipPath></defs>
-<style>
-  .c{opacity:0;animation:show .01s linear forwards}
-  @keyframes show{to{opacity:1}}
-  .k{fill-opacity:0;animation:key .01s linear forwards}
-  @keyframes key{to{fill-opacity:1}}
-  .cursor{animation:blink 1s steps(1) infinite}
-  @keyframes blink{50%{opacity:0}}
-</style>
-<g clip-path="url(#win)">
-  <rect width="${W}" height="${H}" fill="#1d1638"/>
-  <rect width="${W}" height="30" fill="url(#bar)"/>
-  <circle cx="20" cy="15" r="6" fill="#ff9cc5"/><circle cx="40" cy="15" r="6" fill="#ffe27a"/><circle cx="60" cy="15" r="6" fill="#bfe3ff"/>
-  <text x="${W / 2}" y="20" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">phuriphat@mfu: ~</text>
-  ${out.join('\n  ')}
-</g>
-<rect x=".5" y=".5" width="${W - 1}" height="${H - 1}" rx="14" fill="none" stroke="#c4a8ff" stroke-opacity=".35"/>
-</svg>`;
-}
-
 // ---------- quest board ----------
 
 const QUESTS = {
@@ -551,7 +495,7 @@ ${p.chips.map((c, i) => `<rect x="${chipsX[i]}" y="142" width="${c.length * 6.6 
 }
 
 mkdirSync('assets', { recursive: true });
-for (const [file, svg] of [['header', header()], ['footer', footer()], ['character', character()], ['pixie-laptop', pixieLaptop()], ['terminal', terminal()], ['quest-log', questBoard()], ['inventory', await inventory()], ['divider', divider()]]) {
+for (const [file, svg] of [['header', header()], ['footer', footer()], ['character', character()], ['pixie-laptop', pixieLaptop()], ['quest-log', questBoard()], ['inventory', await inventory()], ['divider', divider()]]) {
   writeFileSync(`assets/${file}.svg`, svg);
   console.log(`assets/${file}.svg written (${svg.length} bytes)`);
 }
