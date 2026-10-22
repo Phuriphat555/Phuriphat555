@@ -214,7 +214,7 @@ function character() {
   }).join('\n  ');
   const equip = EQUIPMENT.map(([slot, item], i) =>
     `<text x="${panelW + 36 + i * 150}" y="${H - 38}" font-size="10" fill="#9a92c0" letter-spacing="1">${slot.toUpperCase()}</text><text x="${panelW + 36 + i * 150}" y="${H - 22}" font-size="13" font-weight="700" fill="#ffd66b">${item}</text>`).join('');
-  const traits = TRAITS.map((t, i) => `<text x="${panelW / 2}" y="${236 + i * 16}" text-anchor="middle" font-size="11" fill="#fdf4ff">✦ ${t}</text>`).join('');
+  const traits = TRAITS.map((t, i) => `<text x="${panelW / 2}" y="${254 + i * 16}" text-anchor="middle" font-size="11" fill="#fdf4ff">✦ ${t}</text>`).join('');
 
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="100%" font-family="${FONT}">
 <title>Character sheet</title>
@@ -235,6 +235,7 @@ function character() {
   <text x="${panelW / 2}" y="40" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff" letter-spacing="2">CHARACTER</text>
   <text x="${panelW / 2}" y="190" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">Phuriphat555</text>
   <text x="${panelW / 2}" y="210" text-anchor="middle" font-size="12" fill="#fdf4ff">Class: Software Engineer</text>
+  <text x="${panelW / 2}" y="226" text-anchor="middle" font-size="12" font-weight="700" fill="#fff4c2">Guild: MFU · Year 4</text>
   ${traits}
   <text x="${panelW + 36}" y="38" font-size="12" font-weight="700" fill="#c4a8ff" letter-spacing="2" font-family="${MONO}">ATTRIBUTES</text>
   ${rows}
