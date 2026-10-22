@@ -63,4 +63,20 @@
 
 </div>
 
+---
+
+<div align="center">
+
+### ⚔️ Contribution Quest
+
+Every day I code spawns a slime. My knight slays them for EXP and levels up.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Phuriphat555/Phuriphat555/output/mmorpg-contribution-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Phuriphat555/Phuriphat555/output/mmorpg-contribution.svg" />
+  <img alt="A pixel knight slaying contribution slimes" src="https://raw.githubusercontent.com/Phuriphat555/Phuriphat555/output/mmorpg-contribution.svg" />
+</picture>
+
+</div>
+
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:bfe3ff,50:ffc9dd,100:c4a8ff&height=110&section=footer" width="100%" alt="" />
