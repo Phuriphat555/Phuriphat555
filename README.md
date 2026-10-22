@@ -27,6 +27,39 @@ I'm a **Software Engineering student** who likes taking an idea all the way thro
 
 <div align="center">
 
+### 🧙 Character Sheet
+
+<img src="assets/character.svg" width="100%" alt="Character sheet. Class: Software Engineer. Attributes: Mobile, Frontend, Backend, Languages, Game Dev and Security. Equipment: VS Code, Git and GitHub, Postman, Docker." />
+
+</div>
+
+---
+
+<div align="center">
+
+### 📜 Quest Log
+
+</div>
+
+**Main quest**
+- [ ] 🎓 Graduate in Software Engineering
+
+**Active quests**
+- [ ] ⚙️ Build a full REST API with NestJS, from auth to deployment
+- [ ] 🎮 Finish my first playable game in Unity
+- [ ] 🌐 Ship a full-stack web app with React and Node.js
+- [ ] 🤝 Make my first open-source contribution
+
+**Completed**
+- [x] 📱 Ship a React Native app: [Monster Hunter Info](https://github.com/Phuriphat555/Final-Exam)
+- [x] 👥 Build a Flutter app as a team: [Bento Goal App](https://github.com/Phuriphat555/Challenge-Goal-App)
+- [x] 🔐 Take on hands-on OWASP security labs
+- [x] ✨ Design my GitHub profile
+
+---
+
+<div align="center">
+
 ### 🤝 Connect
 
 <a href="https://github.com/Phuriphat555"><img src="https://img.shields.io/badge/GitHub-1b1530?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
@@ -88,6 +121,12 @@ I'm a **Software Engineering student** who likes taking an idea all the way thro
 
 <img src="https://streak-stats.demolab.com?user=Phuriphat555&hide_border=true&background=00000000&ring=C4A8FF&fire=FF9CC5&currStreakNum=C4A8FF&sideNums=A77BF3&currStreakLabel=A77BF3&sideLabels=8F88AA&dates=8F88AA&stroke=8F88AA55" alt="GitHub streak" />
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Phuriphat555/Phuriphat555/output/activity-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Phuriphat555/Phuriphat555/output/activity.svg" />
+  <img alt="Weekly contributions over the last year" src="https://raw.githubusercontent.com/Phuriphat555/Phuriphat555/output/activity.svg" width="100%" />
+</picture>
+
 </div>
 
 ---
@@ -106,4 +145,10 @@ Every day I code spawns a slime. My knight slays them for EXP and levels up.
 
 </div>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:bfe3ff,50:ffc9dd,100:c4a8ff&height=110&section=footer" width="100%" alt="" />
+<img src="assets/footer.svg" width="100%" alt="The pixel knight waving from a cloud: Thanks for visiting!" />
+
+<div align="center">
+
+<img src="https://komarev.com/ghpvc/?username=Phuriphat555&label=Travelers%20visited&color=c4a8ff&style=flat-square" alt="Profile visitors" />
+
+</div>

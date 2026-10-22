@@ -225,6 +225,53 @@ ${els.join('\n')}
 </svg>`;
 }
 
+// ---------- weekly activity chart ----------
+
+function renderActivity(days, c) {
+  const W = 860, H = 240, L = 44, R = 20, T = 46, B = 40;
+  const weeks = [];
+  for (const d of days) {
+    weeks[d.x] ??= { total: 0, date: d.date };
+    weeks[d.x].total += d.count;
+  }
+  const max = Math.max(4, ...weeks.map((w) => w.total));
+  const step = Math.ceil(max / 4);
+  const top = step * 4;
+  const x = (i) => L + (i * (W - L - R)) / (weeks.length - 1);
+  const y = (v) => T + (H - T - B) * (1 - v / top);
+  const pts = weeks.map((w, i) => [x(i), y(w.total)]);
+  const line = pts.map(([px, py], i) => `${i ? 'L' : 'M'}${px.toFixed(1)} ${py.toFixed(1)}`).join('');
+  const area = `${line}L${x(weeks.length - 1).toFixed(1)} ${y(0)}L${L} ${y(0)}Z`;
+
+  const grid = [0, 1, 2, 3, 4].map((k) => {
+    const v = k * step, gy = y(v).toFixed(1);
+    return `<line x1="${L}" x2="${W - R}" y1="${gy}" y2="${gy}" stroke="${c.soft}" stroke-opacity="${k ? 0.18 : 0.4}"/><text x="${L - 8}" y="${Number(gy) + 4}" text-anchor="end" font-size="10" fill="${c.soft}">${v}</text>`;
+  }).join('');
+  const months = [];
+  let last = '';
+  weeks.forEach((w, i) => {
+    const m = new Date(w.date + 'T00:00:00Z').toLocaleString('en', { month: 'short', timeZone: 'UTC' });
+    if (m !== last && i > 0 && i < weeks.length - 2) months.push(`<text x="${x(i).toFixed(1)}" y="${H - B + 18}" text-anchor="middle" font-size="10" fill="${c.soft}">${m}</text>`);
+    last = m;
+  });
+  const peak = weeks.reduce((b, w, i) => (w.total > weeks[b].total ? i : b), 0);
+  const total = weeks.reduce((s, w) => s + w.total, 0);
+  const dots = pts.map(([px, py], i) => (weeks[i].total ? `<rect x="${(px - 2).toFixed(1)}" y="${(py - 2).toFixed(1)}" width="4" height="4" fill="${c.exp}"/>` : '')).join('');
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">
+<title>${USER} weekly contributions</title>
+<defs><linearGradient id="fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${c.slime[2]}" stop-opacity=".55"/><stop offset="1" stop-color="${c.slime[2]}" stop-opacity="0"/></linearGradient></defs>
+<style>.draw{stroke-dasharray:4000;stroke-dashoffset:4000;animation:draw 2.4s ease-out forwards}@keyframes draw{to{stroke-dashoffset:0}}.fade{opacity:0;animation:fade .8s ease-out 1.4s forwards}@keyframes fade{to{opacity:1}}</style>
+<text x="${L}" y="22" font-size="13" font-weight="700" fill="${c.ink}">Weekly contributions</text>
+<text x="${W - R}" y="22" text-anchor="end" font-size="11" fill="${c.soft}">${total} in the last year · best week ${weeks[peak].total}</text>
+${grid}
+${months.join('')}
+<path class="fade" d="${area}" fill="url(#fill)"/>
+<path class="draw" d="${line}" fill="none" stroke="${c.dmg}" stroke-width="2" stroke-linejoin="round"/>
+<g class="fade">${dots}</g>
+</svg>`;
+}
+
 // ---------- main ----------
 
 const days = await loadDays();
@@ -232,4 +279,6 @@ const tl = buildTimeline(days);
 mkdirSync(OUT, { recursive: true });
 writeFileSync(`${OUT}/mmorpg-contribution.svg`, render(tl, PALETTES.light));
 writeFileSync(`${OUT}/mmorpg-contribution-dark.svg`, render(tl, PALETTES.dark));
+writeFileSync(`${OUT}/activity.svg`, renderActivity(days, PALETTES.light));
+writeFileSync(`${OUT}/activity-dark.svg`, renderActivity(days, PALETTES.dark));
 console.log(`${USER}: ${tl.monsters.length} slimes, ${tl.total} EXP, reached Lv. ${tl.finalLv}, loop ${tl.T.toFixed(1)}s`);
