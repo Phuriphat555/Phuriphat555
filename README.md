@@ -10,6 +10,23 @@
 
 <div align="center">
 
+### ☁️ About Me
+
+</div>
+
+I'm a **Software Engineering student** who likes taking an idea all the way through: sketching the screens in Figma, writing the app, wiring up the API and testing it until it holds together. I'm self-motivated and always picking up something new, from mobile frameworks to game engines.
+
+- 🌐 **Web & backend:** building with React, Node.js and NestJS, and testing APIs in Postman
+- 📱 **Mobile:** shipped a React Native app with Expo and worked in a team on a Flutter app
+- 🎮 **Games:** made a Monster Hunter companion app and I'm exploring Unity with C# and C++
+- 🔐 **Security:** practising secure coding against the OWASP Top 10 in hands-on labs
+- 🌱 **Right now:** sharpening my backend skills and looking for projects to learn from
+- 📫 **Reach me:** [qssomme@gmail.com](mailto:qssomme@gmail.com)
+
+---
+
+<div align="center">
+
 ### 🤝 Connect
 
 <a href="https://github.com/Phuriphat555"><img src="https://img.shields.io/badge/GitHub-1b1530?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
