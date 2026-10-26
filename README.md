@@ -22,7 +22,7 @@
 
 ### 🧙 Character Sheet · Skill Levels
 
-<img src="assets/character.svg" width="100%" alt="My skill levels out of 5. Mobile 4, Confident. Frontend 3, Comfortable. Backend 3, Comfortable. Languages 3, Comfortable. Security 2, Learning. Game Dev 2, Learning. Tools I use every day: VS Code, Git and GitHub, Postman, Docker." />
+<img src="assets/character.svg?v=2" width="100%" alt="My skill levels out of 5. Mobile 4, Confident. Frontend 3, Comfortable. Backend 3, Comfortable. Languages 3, Comfortable. Security 2, Learning. Game Dev 2, Learning. Tools I use every day: VS Code, Git and GitHub, Postman, Docker." />
 
 </div>
 
