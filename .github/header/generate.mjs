@@ -593,7 +593,7 @@ ${p.chips.map((c, i) => `<rect x="${chipsX[i]}" y="142" width="${c.length * 6.6 
 }
 
 mkdirSync('assets', { recursive: true });
-for (const [file, svg] of [['header', header()], ['footer', footer()], ['character', character()], ['pixie-laptop', pixieLaptop()], ['quest-log', questBoard()], ['inventory', await inventory()], ['divider', divider()], ['about', aboutCard()]]) {
+for (const [file, svg] of [['header', header()], ['footer', footer()], ['character-sheet', character()], ['pixie-laptop', pixieLaptop()], ['quest-log', questBoard()], ['inventory', await inventory()], ['divider', divider()], ['about', aboutCard()]]) {
   writeFileSync(`assets/${file}.svg`, svg);
   console.log(`assets/${file}.svg written (${svg.length} bytes)`);
 }
