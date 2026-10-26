@@ -185,62 +185,71 @@ function footer() {
 
 // ---------- character sheet ----------
 
+// skill level out of 5, using the scale in LEVELS
 const STATS = [
-  ['Mobile', 'React Native, Flutter', 80],
-  ['Frontend', 'React, Figma', 70],
-  ['Backend', 'Node.js, NestJS', 65],
-  ['Languages', 'JS/TS, Java, C#, C++, Python', 70],
-  ['Game Dev', 'Unity', 45],
-  ['Security', 'OWASP Top 10 labs', 55],
+  ['Mobile', 'React Native, Flutter', 4],
+  ['Frontend', 'React, Figma', 3],
+  ['Backend', 'Node.js, NestJS', 3],
+  ['Languages', 'JS/TS, Java, C#, C++, Python', 3],
+  ['Security', 'OWASP Top 10 labs', 2],
+  ['Game Dev', 'Unity', 2],
 ];
-const EQUIPMENT = [
-  ['Weapon', 'VS Code'],
-  ['Shield', 'Git &amp; GitHub'],
-  ['Spellbook', 'Postman'],
-  ['Mount', 'Docker'],
+const LEVELS = ['Beginner', 'Learning', 'Comfortable', 'Confident', 'Expert'];
+const LEVEL_COLORS = ['#9a92c0', '#8fc7ff', '#c4a8ff', '#ff9cc5', '#ffd66b'];
+const TOOLS = [
+  ['Code editor', 'VS Code'],
+  ['Version control', 'Git &amp; GitHub'],
+  ['API testing', 'Postman'],
+  ['Containers', 'Docker'],
 ];
 const TRAITS = ['Self-Motivated', 'Continuous Learner', 'Web Developer'];
 
 function character() {
-  const H = 345, PX = 10;
-  const panelW = 250;
-  const barX = panelW + 190, barW = W - barX - 40;
-  const rows = STATS.map(([name, detail, v], i) => {
-    const y = 66 + i * 36;
-    return `<text x="${panelW + 36}" y="${y + 5}" font-size="14" font-weight="700" fill="#f1ecff">${name}</text>
-  <text x="${panelW + 36}" y="${y + 20}" font-size="10" fill="#9a92c0">${detail}</text>
-  <rect x="${barX}" y="${y - 6}" width="${barW}" height="12" rx="6" fill="#2a2345"/>
-  <rect class="grow" style="animation-delay:${(i * 0.12).toFixed(2)}s" x="${barX}" y="${y - 6}" width="${(barW * v) / 100}" height="12" rx="6" fill="url(#bar)"/>`;
+  const H = 400, PX = 10;
+  const panelW = 250, X = panelW + 36;
+  const pipX = X + 210, PIP = 40, PGAP = 6;
+  const rows = STATS.map(([name, detail, lv], i) => {
+    const y = 84 + i * 38;
+    const color = LEVEL_COLORS[lv - 1];
+    const pips = [0, 1, 2, 3, 4].map((k) =>
+      `<rect class="${k < lv ? 'pip' : ''}" style="animation-delay:${(i * 0.1 + k * 0.08).toFixed(2)}s" x="${pipX + k * (PIP + PGAP)}" y="${y - 7}" width="${PIP}" height="14" rx="4" fill="${k < lv ? color : '#2c2450'}"/>`).join('');
+    return `<text x="${X}" y="${y}" font-size="14.5" font-weight="700" fill="#f1ecff">${name}</text>
+  <text x="${X}" y="${y + 15}" font-size="10.5" fill="#9a92c0">${detail}</text>
+  ${pips}
+  <text x="${W - 36}" y="${y + 5}" text-anchor="end" font-size="12.5" font-weight="700" fill="${color}">${LEVELS[lv - 1]}</text>`;
   }).join('\n  ');
-  const equip = EQUIPMENT.map(([slot, item], i) =>
-    `<text x="${panelW + 36 + i * 150}" y="${H - 38}" font-size="10" fill="#9a92c0" letter-spacing="1">${slot.toUpperCase()}</text><text x="${panelW + 36 + i * 150}" y="${H - 22}" font-size="13" font-weight="700" fill="#ffd66b">${item}</text>`).join('');
-  const traits = TRAITS.map((t, i) => `<text x="${panelW / 2}" y="${254 + i * 16}" text-anchor="middle" font-size="11" fill="#fdf4ff">✦ ${t}</text>`).join('');
+  const legend = LEVELS.map((l, i) => `<tspan fill="${LEVEL_COLORS[i]}">${i + 1}</tspan> ${l}`).join('   ');
+  const tools = TOOLS.map(([what, item], i) =>
+    `<text x="${X + i * 150}" y="${H - 36}" font-size="10.5" fill="#9a92c0">${what}</text><text x="${X + i * 150}" y="${H - 18}" font-size="13.5" font-weight="700" fill="#ffd66b">${item}</text>`).join('');
+  const traits = TRAITS.map((t, i) => `<text x="${panelW / 2}" y="${284 + i * 18}" text-anchor="middle" font-size="11.5" fill="#fdf4ff">✦ ${t}</text>`).join('');
 
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="100%" font-family="${FONT}">
-<title>Character sheet</title>
+<title>Skill levels out of 5: ${STATS.map(([n, , lv]) => `${n} ${lv} (${LEVELS[lv - 1]})`).join(', ')}</title>
 <defs>
   ${skyGradient('panel', false)}
-  <linearGradient id="bar" x1="0" x2="1"><stop offset="0" stop-color="#c4a8ff"/><stop offset="1" stop-color="#ff9cc5"/></linearGradient>
   <clipPath id="card"><rect width="${W}" height="${H}" rx="18"/></clipPath>
 </defs>
 <style>${SKY_STYLE}
-  .grow{transform-box:fill-box;transform-origin:left;animation:grow 1.2s cubic-bezier(.2,.8,.2,1) both}
-  @keyframes grow{from{transform:scaleX(0)}}
+  .pip{animation:pop .5s cubic-bezier(.2,.8,.2,1) both}
+  @keyframes pop{from{opacity:0}}
 </style>
 <g clip-path="url(#card)">
   <rect width="${W}" height="${H}" fill="#1d1638"/>
   <rect width="${panelW}" height="${H}" fill="url(#panel)"/>
-  ${starField(14, H, (x, y) => x > panelW - 6 || (x > 60 && x < 190 && y > 40 && y < 260))}
-  <g class="bob">${sprite(KNIGHT, KNIGHT_COLORS, PX, panelW / 2 - 4 * PX, 60)}</g>
-  <text x="${panelW / 2}" y="40" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff" letter-spacing="2">CHARACTER</text>
-  <text x="${panelW / 2}" y="190" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">Phuriphat555</text>
-  <text x="${panelW / 2}" y="210" text-anchor="middle" font-size="12" fill="#fdf4ff">Class: Software Engineer</text>
-  <text x="${panelW / 2}" y="226" text-anchor="middle" font-size="12" font-weight="700" fill="#fff4c2">Guild: MFU · Year 4</text>
+  ${starField(14, H, (x, y) => x > panelW - 6 || (x > 60 && x < 190 && y > 40 && y < 340))}
+  <g class="bob">${sprite(KNIGHT, KNIGHT_COLORS, PX, panelW / 2 - 4 * PX, 70)}</g>
+  <text x="${panelW / 2}" y="44" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff" letter-spacing="2">MY CHARACTER</text>
+  <text x="${panelW / 2}" y="206" text-anchor="middle" font-size="19" font-weight="700" fill="#ffffff">Phuriphat555</text>
+  <text x="${panelW / 2}" y="228" text-anchor="middle" font-size="12" fill="#fdf4ff">Software Engineering student</text>
+  <text x="${panelW / 2}" y="246" text-anchor="middle" font-size="12" font-weight="700" fill="#fff4c2">Mae Fah Luang University · Year 4</text>
   ${traits}
-  <text x="${panelW + 36}" y="38" font-size="12" font-weight="700" fill="#c4a8ff" letter-spacing="2" font-family="${MONO}">ATTRIBUTES</text>
+  <text x="${X}" y="40" font-size="12" font-weight="700" fill="#c4a8ff" letter-spacing="2" font-family="${MONO}">MY SKILL LEVELS</text>
+  <text x="${W - 36}" y="40" text-anchor="end" font-size="11" fill="#9a92c0">how comfortable I am with each area, out of 5</text>
   ${rows}
-  <rect x="${panelW + 36}" y="${H - 62}" width="${W - panelW - 76}" height="1" fill="#3a3160"/>
-  ${equip}
+  <text x="${X}" y="${84 + STATS.length * 38 + 6}" font-size="11" fill="#9a92c0" font-family="${MONO}">${legend}</text>
+  <rect x="${X}" y="${H - 66}" width="${W - X - 36}" height="1" fill="#3a3160"/>
+  <text x="${X}" y="${H - 52}" font-size="11" font-weight="700" fill="#c4a8ff" letter-spacing="2" font-family="${MONO}">TOOLS I USE EVERY DAY</text>
+  ${tools}
 </g>
 <rect x=".5" y=".5" width="${W - 1}" height="${H - 1}" rx="18" fill="none" stroke="#c4a8ff" stroke-opacity=".35"/>
 </svg>`;

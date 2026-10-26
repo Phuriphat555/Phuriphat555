@@ -1,11 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 345" width="100%" font-family="'Segoe UI',Helvetica,Arial,sans-serif">
-<title>Character sheet</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" width="100%" font-family="'Segoe UI',Helvetica,Arial,sans-serif">
+<title>Skill levels out of 5: Mobile 4 (Confident), Frontend 3 (Comfortable), Backend 3 (Comfortable), Languages 3 (Comfortable), Security 2 (Learning), Game Dev 2 (Learning)</title>
 <defs>
   <linearGradient id="panel" x1="0" y1="0" x2="1" y2="0.4">
     <stop offset="0" stop-color="#8a74d6"/><stop offset=".5" stop-color="#d79cc4"/><stop offset="1" stop-color="#86b4e0"/>
   </linearGradient>
-  <linearGradient id="bar" x1="0" x2="1"><stop offset="0" stop-color="#c4a8ff"/><stop offset="1" stop-color="#ff9cc5"/></linearGradient>
-  <clipPath id="card"><rect width="900" height="345" rx="18"/></clipPath>
+  <clipPath id="card"><rect width="900" height="400" rx="18"/></clipPath>
 </defs>
 <style>
   .tw{animation:tw 3s ease-in-out infinite alternate}
@@ -14,59 +13,62 @@
   @keyframes drift{from{transform:translateX(-80px)}to{transform:translateX(920px)}}
   .bob{animation:bob .9s ease-in-out infinite alternate}
   @keyframes bob{to{transform:translateY(-4px)}}
-  .grow{transform-box:fill-box;transform-origin:left;animation:grow 1.2s cubic-bezier(.2,.8,.2,1) both}
-  @keyframes grow{from{transform:scaleX(0)}}
+  .pip{animation:pop .5s cubic-bezier(.2,.8,.2,1) both}
+  @keyframes pop{from{opacity:0}}
 </style>
 <g clip-path="url(#card)">
-  <rect width="900" height="345" fill="#1d1638"/>
-  <rect width="250" height="345" fill="url(#panel)"/>
-  <g class="tw" style="animation-duration:4.44s;animation-delay:-0.74s"><rect x="221" y="179" width="2" height="8" fill="#fff"/><rect x="218" y="182" width="8" height="2" fill="#fff"/></g>
-  <rect class="tw" style="animation-duration:4.08s;animation-delay:-2.46s" x="35" y="247" width="2" height="2" fill="#fff"/>
-  <g class="tw" style="animation-duration:2.26s;animation-delay:-3.36s"><rect x="52" y="189" width="2" height="8" fill="#fff"/><rect x="49" y="192" width="8" height="2" fill="#fff"/></g>
-  <rect class="tw" style="animation-duration:2.42s;animation-delay:-1.09s" x="221" y="225" width="2" height="2" fill="#fff"/>
-  <g class="tw" style="animation-duration:4.86s;animation-delay:-3.07s"><rect x="23" y="273" width="2" height="8" fill="#fff"/><rect x="20" y="276" width="8" height="2" fill="#fff"/></g>
-  <rect class="tw" style="animation-duration:3.57s;animation-delay:-1.11s" x="44" y="328" width="2" height="2" fill="#fff"/>
-  <rect class="tw" style="animation-duration:4.09s;animation-delay:-1.38s" x="151" y="297" width="2" height="2" fill="#fff"/>
-  <rect class="tw" style="animation-duration:3.62s;animation-delay:-3.98s" x="172" y="280" width="2" height="2" fill="#fff"/>
-  <rect class="tw" style="animation-duration:2.36s;animation-delay:-2.06s" x="118" y="37" width="2" height="2" fill="#fff"/>
-  <rect class="tw" style="animation-duration:2.74s;animation-delay:-0.98s" x="205" y="125" width="2" height="2" fill="#fff"/>
-  <g class="tw" style="animation-duration:3.70s;animation-delay:-2.85s"><rect x="220" y="317" width="2" height="8" fill="#fff"/><rect x="217" y="320" width="8" height="2" fill="#fff"/></g>
-  <rect class="tw" style="animation-duration:4.58s;animation-delay:-2.19s" x="20" y="318" width="2" height="2" fill="#fff"/>
-  <rect class="tw" style="animation-duration:2.27s;animation-delay:-2.80s" x="59" y="253" width="2" height="2" fill="#fff"/>
-  <rect class="tw" style="animation-duration:4.46s;animation-delay:-3.21s" x="21" y="137" width="2" height="2" fill="#fff"/>
-  <g class="bob"><rect x="115" y="60" width="10" height="10" fill="#8a5cf6"/><rect x="125" y="60" width="10" height="10" fill="#8a5cf6"/><rect x="105" y="70" width="10" height="10" fill="#8a5cf6"/><rect x="115" y="70" width="10" height="10" fill="#8a5cf6"/><rect x="125" y="70" width="10" height="10" fill="#8a5cf6"/><rect x="135" y="70" width="10" height="10" fill="#8a5cf6"/><rect x="105" y="80" width="10" height="10" fill="#ffd7b8"/><rect x="115" y="80" width="10" height="10" fill="#2c2547"/><rect x="125" y="80" width="10" height="10" fill="#ffd7b8"/><rect x="135" y="80" width="10" height="10" fill="#2c2547"/><rect x="105" y="90" width="10" height="10" fill="#ffd7b8"/><rect x="115" y="90" width="10" height="10" fill="#ffd7b8"/><rect x="125" y="90" width="10" height="10" fill="#ffd7b8"/><rect x="135" y="90" width="10" height="10" fill="#ffd7b8"/><rect x="95" y="100" width="10" height="10" fill="#e2679a"/><rect x="105" y="100" width="10" height="10" fill="#e2679a"/><rect x="115" y="100" width="10" height="10" fill="#e2679a"/><rect x="125" y="100" width="10" height="10" fill="#e2679a"/><rect x="135" y="100" width="10" height="10" fill="#e2679a"/><rect x="155" y="100" width="10" height="10" fill="#bfe3ff"/><rect x="85" y="110" width="10" height="10" fill="#e2679a"/><rect x="105" y="110" width="10" height="10" fill="#e2679a"/><rect x="115" y="110" width="10" height="10" fill="#e2679a"/><rect x="125" y="110" width="10" height="10" fill="#e2679a"/><rect x="135" y="110" width="10" height="10" fill="#e2679a"/><rect x="155" y="110" width="10" height="10" fill="#bfe3ff"/><rect x="105" y="120" width="10" height="10" fill="#e2679a"/><rect x="115" y="120" width="10" height="10" fill="#e2679a"/><rect x="125" y="120" width="10" height="10" fill="#e2679a"/><rect x="135" y="120" width="10" height="10" fill="#e2679a"/><rect x="155" y="120" width="10" height="10" fill="#bfe3ff"/><rect x="105" y="130" width="10" height="10" fill="#2c2547"/><rect x="135" y="130" width="10" height="10" fill="#2c2547"/><rect x="105" y="140" width="10" height="10" fill="#2c2547"/><rect x="135" y="140" width="10" height="10" fill="#2c2547"/></g>
-  <text x="125" y="40" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff" letter-spacing="2">CHARACTER</text>
-  <text x="125" y="190" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">Phuriphat555</text>
-  <text x="125" y="210" text-anchor="middle" font-size="12" fill="#fdf4ff">Class: Software Engineer</text>
-  <text x="125" y="226" text-anchor="middle" font-size="12" font-weight="700" fill="#fff4c2">Guild: MFU · Year 4</text>
-  <text x="125" y="254" text-anchor="middle" font-size="11" fill="#fdf4ff">✦ Self-Motivated</text><text x="125" y="270" text-anchor="middle" font-size="11" fill="#fdf4ff">✦ Continuous Learner</text><text x="125" y="286" text-anchor="middle" font-size="11" fill="#fdf4ff">✦ Web Developer</text>
-  <text x="286" y="38" font-size="12" font-weight="700" fill="#c4a8ff" letter-spacing="2" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">ATTRIBUTES</text>
-  <text x="286" y="71" font-size="14" font-weight="700" fill="#f1ecff">Mobile</text>
-  <text x="286" y="86" font-size="10" fill="#9a92c0">React Native, Flutter</text>
-  <rect x="440" y="60" width="420" height="12" rx="6" fill="#2a2345"/>
-  <rect class="grow" style="animation-delay:0.00s" x="440" y="60" width="336" height="12" rx="6" fill="url(#bar)"/>
-  <text x="286" y="107" font-size="14" font-weight="700" fill="#f1ecff">Frontend</text>
-  <text x="286" y="122" font-size="10" fill="#9a92c0">React, Figma</text>
-  <rect x="440" y="96" width="420" height="12" rx="6" fill="#2a2345"/>
-  <rect class="grow" style="animation-delay:0.12s" x="440" y="96" width="294" height="12" rx="6" fill="url(#bar)"/>
-  <text x="286" y="143" font-size="14" font-weight="700" fill="#f1ecff">Backend</text>
-  <text x="286" y="158" font-size="10" fill="#9a92c0">Node.js, NestJS</text>
-  <rect x="440" y="132" width="420" height="12" rx="6" fill="#2a2345"/>
-  <rect class="grow" style="animation-delay:0.24s" x="440" y="132" width="273" height="12" rx="6" fill="url(#bar)"/>
-  <text x="286" y="179" font-size="14" font-weight="700" fill="#f1ecff">Languages</text>
-  <text x="286" y="194" font-size="10" fill="#9a92c0">JS/TS, Java, C#, C++, Python</text>
-  <rect x="440" y="168" width="420" height="12" rx="6" fill="#2a2345"/>
-  <rect class="grow" style="animation-delay:0.36s" x="440" y="168" width="294" height="12" rx="6" fill="url(#bar)"/>
-  <text x="286" y="215" font-size="14" font-weight="700" fill="#f1ecff">Game Dev</text>
-  <text x="286" y="230" font-size="10" fill="#9a92c0">Unity</text>
-  <rect x="440" y="204" width="420" height="12" rx="6" fill="#2a2345"/>
-  <rect class="grow" style="animation-delay:0.48s" x="440" y="204" width="189" height="12" rx="6" fill="url(#bar)"/>
-  <text x="286" y="251" font-size="14" font-weight="700" fill="#f1ecff">Security</text>
-  <text x="286" y="266" font-size="10" fill="#9a92c0">OWASP Top 10 labs</text>
-  <rect x="440" y="240" width="420" height="12" rx="6" fill="#2a2345"/>
-  <rect class="grow" style="animation-delay:0.60s" x="440" y="240" width="231" height="12" rx="6" fill="url(#bar)"/>
-  <rect x="286" y="283" width="574" height="1" fill="#3a3160"/>
-  <text x="286" y="307" font-size="10" fill="#9a92c0" letter-spacing="1">WEAPON</text><text x="286" y="323" font-size="13" font-weight="700" fill="#ffd66b">VS Code</text><text x="436" y="307" font-size="10" fill="#9a92c0" letter-spacing="1">SHIELD</text><text x="436" y="323" font-size="13" font-weight="700" fill="#ffd66b">Git &amp; GitHub</text><text x="586" y="307" font-size="10" fill="#9a92c0" letter-spacing="1">SPELLBOOK</text><text x="586" y="323" font-size="13" font-weight="700" fill="#ffd66b">Postman</text><text x="736" y="307" font-size="10" fill="#9a92c0" letter-spacing="1">MOUNT</text><text x="736" y="323" font-size="13" font-weight="700" fill="#ffd66b">Docker</text>
+  <rect width="900" height="400" fill="#1d1638"/>
+  <rect width="250" height="400" fill="url(#panel)"/>
+  <g class="tw" style="animation-duration:4.44s;animation-delay:-0.74s"><rect x="221" y="208" width="2" height="8" fill="#fff"/><rect x="218" y="211" width="8" height="2" fill="#fff"/></g>
+  <rect class="tw" style="animation-duration:4.08s;animation-delay:-2.46s" x="35" y="287" width="2" height="2" fill="#fff"/>
+  <g class="tw" style="animation-duration:2.26s;animation-delay:-3.36s"><rect x="52" y="221" width="2" height="8" fill="#fff"/><rect x="49" y="224" width="8" height="2" fill="#fff"/></g>
+  <rect class="tw" style="animation-duration:2.42s;animation-delay:-1.09s" x="221" y="261" width="2" height="2" fill="#fff"/>
+  <g class="tw" style="animation-duration:4.86s;animation-delay:-3.07s"><rect x="23" y="319" width="2" height="8" fill="#fff"/><rect x="20" y="322" width="8" height="2" fill="#fff"/></g>
+  <rect class="tw" style="animation-duration:3.57s;animation-delay:-1.11s" x="44" y="382" width="2" height="2" fill="#fff"/>
+  <rect class="tw" style="animation-duration:4.09s;animation-delay:-1.38s" x="151" y="346" width="2" height="2" fill="#fff"/>
+  <g class="tw" style="animation-duration:2.63s;animation-delay:-1.74s"><rect x="22" y="211" width="2" height="8" fill="#fff"/><rect x="19" y="214" width="8" height="2" fill="#fff"/></g>
+  <rect class="tw" style="animation-duration:4.04s;animation-delay:-3.00s" x="225" y="101" width="2" height="2" fill="#fff"/>
+  <rect class="tw" style="animation-duration:4.58s;animation-delay:-2.19s" x="20" y="370" width="2" height="2" fill="#fff"/>
+  <rect class="tw" style="animation-duration:2.27s;animation-delay:-2.80s" x="59" y="295" width="2" height="2" fill="#fff"/>
+  <rect class="tw" style="animation-duration:4.46s;animation-delay:-3.21s" x="21" y="159" width="2" height="2" fill="#fff"/>
+  <rect class="tw" style="animation-duration:2.41s;animation-delay:-2.54s" x="56" y="176" width="2" height="2" fill="#fff"/>
+  <rect class="tw" style="animation-duration:4.91s;animation-delay:-0.74s" x="49" y="113" width="2" height="2" fill="#fff"/>
+  <g class="bob"><rect x="115" y="70" width="10" height="10" fill="#8a5cf6"/><rect x="125" y="70" width="10" height="10" fill="#8a5cf6"/><rect x="105" y="80" width="10" height="10" fill="#8a5cf6"/><rect x="115" y="80" width="10" height="10" fill="#8a5cf6"/><rect x="125" y="80" width="10" height="10" fill="#8a5cf6"/><rect x="135" y="80" width="10" height="10" fill="#8a5cf6"/><rect x="105" y="90" width="10" height="10" fill="#ffd7b8"/><rect x="115" y="90" width="10" height="10" fill="#2c2547"/><rect x="125" y="90" width="10" height="10" fill="#ffd7b8"/><rect x="135" y="90" width="10" height="10" fill="#2c2547"/><rect x="105" y="100" width="10" height="10" fill="#ffd7b8"/><rect x="115" y="100" width="10" height="10" fill="#ffd7b8"/><rect x="125" y="100" width="10" height="10" fill="#ffd7b8"/><rect x="135" y="100" width="10" height="10" fill="#ffd7b8"/><rect x="95" y="110" width="10" height="10" fill="#e2679a"/><rect x="105" y="110" width="10" height="10" fill="#e2679a"/><rect x="115" y="110" width="10" height="10" fill="#e2679a"/><rect x="125" y="110" width="10" height="10" fill="#e2679a"/><rect x="135" y="110" width="10" height="10" fill="#e2679a"/><rect x="155" y="110" width="10" height="10" fill="#bfe3ff"/><rect x="85" y="120" width="10" height="10" fill="#e2679a"/><rect x="105" y="120" width="10" height="10" fill="#e2679a"/><rect x="115" y="120" width="10" height="10" fill="#e2679a"/><rect x="125" y="120" width="10" height="10" fill="#e2679a"/><rect x="135" y="120" width="10" height="10" fill="#e2679a"/><rect x="155" y="120" width="10" height="10" fill="#bfe3ff"/><rect x="105" y="130" width="10" height="10" fill="#e2679a"/><rect x="115" y="130" width="10" height="10" fill="#e2679a"/><rect x="125" y="130" width="10" height="10" fill="#e2679a"/><rect x="135" y="130" width="10" height="10" fill="#e2679a"/><rect x="155" y="130" width="10" height="10" fill="#bfe3ff"/><rect x="105" y="140" width="10" height="10" fill="#2c2547"/><rect x="135" y="140" width="10" height="10" fill="#2c2547"/><rect x="105" y="150" width="10" height="10" fill="#2c2547"/><rect x="135" y="150" width="10" height="10" fill="#2c2547"/></g>
+  <text x="125" y="44" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff" letter-spacing="2">MY CHARACTER</text>
+  <text x="125" y="206" text-anchor="middle" font-size="19" font-weight="700" fill="#ffffff">Phuriphat555</text>
+  <text x="125" y="228" text-anchor="middle" font-size="12" fill="#fdf4ff">Software Engineering student</text>
+  <text x="125" y="246" text-anchor="middle" font-size="12" font-weight="700" fill="#fff4c2">Mae Fah Luang University · Year 4</text>
+  <text x="125" y="284" text-anchor="middle" font-size="11.5" fill="#fdf4ff">✦ Self-Motivated</text><text x="125" y="302" text-anchor="middle" font-size="11.5" fill="#fdf4ff">✦ Continuous Learner</text><text x="125" y="320" text-anchor="middle" font-size="11.5" fill="#fdf4ff">✦ Web Developer</text>
+  <text x="286" y="40" font-size="12" font-weight="700" fill="#c4a8ff" letter-spacing="2" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">MY SKILL LEVELS</text>
+  <text x="864" y="40" text-anchor="end" font-size="11" fill="#9a92c0">how comfortable I am with each area, out of 5</text>
+  <text x="286" y="84" font-size="14.5" font-weight="700" fill="#f1ecff">Mobile</text>
+  <text x="286" y="99" font-size="10.5" fill="#9a92c0">React Native, Flutter</text>
+  <rect class="pip" style="animation-delay:0.00s" x="496" y="77" width="40" height="14" rx="4" fill="#ff9cc5"/><rect class="pip" style="animation-delay:0.08s" x="542" y="77" width="40" height="14" rx="4" fill="#ff9cc5"/><rect class="pip" style="animation-delay:0.16s" x="588" y="77" width="40" height="14" rx="4" fill="#ff9cc5"/><rect class="pip" style="animation-delay:0.24s" x="634" y="77" width="40" height="14" rx="4" fill="#ff9cc5"/><rect class="" style="animation-delay:0.32s" x="680" y="77" width="40" height="14" rx="4" fill="#2c2450"/>
+  <text x="864" y="89" text-anchor="end" font-size="12.5" font-weight="700" fill="#ff9cc5">Confident</text>
+  <text x="286" y="122" font-size="14.5" font-weight="700" fill="#f1ecff">Frontend</text>
+  <text x="286" y="137" font-size="10.5" fill="#9a92c0">React, Figma</text>
+  <rect class="pip" style="animation-delay:0.10s" x="496" y="115" width="40" height="14" rx="4" fill="#c4a8ff"/><rect class="pip" style="animation-delay:0.18s" x="542" y="115" width="40" height="14" rx="4" fill="#c4a8ff"/><rect class="pip" style="animation-delay:0.26s" x="588" y="115" width="40" height="14" rx="4" fill="#c4a8ff"/><rect class="" style="animation-delay:0.34s" x="634" y="115" width="40" height="14" rx="4" fill="#2c2450"/><rect class="" style="animation-delay:0.42s" x="680" y="115" width="40" height="14" rx="4" fill="#2c2450"/>
+  <text x="864" y="127" text-anchor="end" font-size="12.5" font-weight="700" fill="#c4a8ff">Comfortable</text>
+  <text x="286" y="160" font-size="14.5" font-weight="700" fill="#f1ecff">Backend</text>
+  <text x="286" y="175" font-size="10.5" fill="#9a92c0">Node.js, NestJS</text>
+  <rect class="pip" style="animation-delay:0.20s" x="496" y="153" width="40" height="14" rx="4" fill="#c4a8ff"/><rect class="pip" style="animation-delay:0.28s" x="542" y="153" width="40" height="14" rx="4" fill="#c4a8ff"/><rect class="pip" style="animation-delay:0.36s" x="588" y="153" width="40" height="14" rx="4" fill="#c4a8ff"/><rect class="" style="animation-delay:0.44s" x="634" y="153" width="40" height="14" rx="4" fill="#2c2450"/><rect class="" style="animation-delay:0.52s" x="680" y="153" width="40" height="14" rx="4" fill="#2c2450"/>
+  <text x="864" y="165" text-anchor="end" font-size="12.5" font-weight="700" fill="#c4a8ff">Comfortable</text>
+  <text x="286" y="198" font-size="14.5" font-weight="700" fill="#f1ecff">Languages</text>
+  <text x="286" y="213" font-size="10.5" fill="#9a92c0">JS/TS, Java, C#, C++, Python</text>
+  <rect class="pip" style="animation-delay:0.30s" x="496" y="191" width="40" height="14" rx="4" fill="#c4a8ff"/><rect class="pip" style="animation-delay:0.38s" x="542" y="191" width="40" height="14" rx="4" fill="#c4a8ff"/><rect class="pip" style="animation-delay:0.46s" x="588" y="191" width="40" height="14" rx="4" fill="#c4a8ff"/><rect class="" style="animation-delay:0.54s" x="634" y="191" width="40" height="14" rx="4" fill="#2c2450"/><rect class="" style="animation-delay:0.62s" x="680" y="191" width="40" height="14" rx="4" fill="#2c2450"/>
+  <text x="864" y="203" text-anchor="end" font-size="12.5" font-weight="700" fill="#c4a8ff">Comfortable</text>
+  <text x="286" y="236" font-size="14.5" font-weight="700" fill="#f1ecff">Security</text>
+  <text x="286" y="251" font-size="10.5" fill="#9a92c0">OWASP Top 10 labs</text>
+  <rect class="pip" style="animation-delay:0.40s" x="496" y="229" width="40" height="14" rx="4" fill="#8fc7ff"/><rect class="pip" style="animation-delay:0.48s" x="542" y="229" width="40" height="14" rx="4" fill="#8fc7ff"/><rect class="" style="animation-delay:0.56s" x="588" y="229" width="40" height="14" rx="4" fill="#2c2450"/><rect class="" style="animation-delay:0.64s" x="634" y="229" width="40" height="14" rx="4" fill="#2c2450"/><rect class="" style="animation-delay:0.72s" x="680" y="229" width="40" height="14" rx="4" fill="#2c2450"/>
+  <text x="864" y="241" text-anchor="end" font-size="12.5" font-weight="700" fill="#8fc7ff">Learning</text>
+  <text x="286" y="274" font-size="14.5" font-weight="700" fill="#f1ecff">Game Dev</text>
+  <text x="286" y="289" font-size="10.5" fill="#9a92c0">Unity</text>
+  <rect class="pip" style="animation-delay:0.50s" x="496" y="267" width="40" height="14" rx="4" fill="#8fc7ff"/><rect class="pip" style="animation-delay:0.58s" x="542" y="267" width="40" height="14" rx="4" fill="#8fc7ff"/><rect class="" style="animation-delay:0.66s" x="588" y="267" width="40" height="14" rx="4" fill="#2c2450"/><rect class="" style="animation-delay:0.74s" x="634" y="267" width="40" height="14" rx="4" fill="#2c2450"/><rect class="" style="animation-delay:0.82s" x="680" y="267" width="40" height="14" rx="4" fill="#2c2450"/>
+  <text x="864" y="279" text-anchor="end" font-size="12.5" font-weight="700" fill="#8fc7ff">Learning</text>
+  <text x="286" y="318" font-size="11" fill="#9a92c0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"><tspan fill="#9a92c0">1</tspan> Beginner   <tspan fill="#8fc7ff">2</tspan> Learning   <tspan fill="#c4a8ff">3</tspan> Comfortable   <tspan fill="#ff9cc5">4</tspan> Confident   <tspan fill="#ffd66b">5</tspan> Expert</text>
+  <rect x="286" y="334" width="578" height="1" fill="#3a3160"/>
+  <text x="286" y="348" font-size="11" font-weight="700" fill="#c4a8ff" letter-spacing="2" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">TOOLS I USE EVERY DAY</text>
+  <text x="286" y="364" font-size="10.5" fill="#9a92c0">Code editor</text><text x="286" y="382" font-size="13.5" font-weight="700" fill="#ffd66b">VS Code</text><text x="436" y="364" font-size="10.5" fill="#9a92c0">Version control</text><text x="436" y="382" font-size="13.5" font-weight="700" fill="#ffd66b">Git &amp; GitHub</text><text x="586" y="364" font-size="10.5" fill="#9a92c0">API testing</text><text x="586" y="382" font-size="13.5" font-weight="700" fill="#ffd66b">Postman</text><text x="736" y="364" font-size="10.5" fill="#9a92c0">Containers</text><text x="736" y="382" font-size="13.5" font-weight="700" fill="#ffd66b">Docker</text>
 </g>
-<rect x=".5" y=".5" width="899" height="344" rx="18" fill="none" stroke="#c4a8ff" stroke-opacity=".35"/>
+<rect x=".5" y=".5" width="899" height="399" rx="18" fill="none" stroke="#c4a8ff" stroke-opacity=".35"/>
 </svg>
